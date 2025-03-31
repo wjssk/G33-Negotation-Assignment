@@ -35,6 +35,13 @@ class TemplateAgent(DefaultParty):
     Template of a Python geniusweb agent.
     """
 
+    FORTUNATE = "fortunate"
+    SELFISH = "selfish"
+    CONCESSION = "concession"
+    UNFORTUNATE = "unfortunate"
+    NICE = "nice"
+    SILENT = "silent"
+
     def __init__(self):
         super().__init__()
         self.logger: ReportToLogger = self.getReporter()
@@ -50,6 +57,22 @@ class TemplateAgent(DefaultParty):
 
         self.last_received_bid: Bid = None
         self.opponent_model: OpponentModel = None
+
+        self.received_bids = []
+        self.dans_categories = []
+        self.dans_stats = {
+            self.FORTUNATE: 0.0,
+            self.SELFISH: 0.0,
+            self.CONCESSION: 0.0,
+            self.UNFORTUNATE: 0.0,
+            self.NICE: 0.0,
+            self.SILENT: 0.0
+        }
+        self.gamma = 0.002
+        self.concession_rate = 0.0
+        self.utility_changes = []
+        self.avg_utility_change = 0.0
+        self.std_utility_change = 0.0
         self.logger.log(logging.INFO, "party is initialized")
 
     def notifyChange(self, data: Inform):
@@ -153,10 +176,75 @@ class TemplateAgent(DefaultParty):
 
             bid = cast(Offer, action).getBid()
 
+            self.received_bids.append(bid)
+
             # update opponent model with bid
             self.opponent_model.update(bid)
+
+            if len(self.received_bids) >= 2:
+                self.analyze_dans()
+
             # set bid as last received
             self.last_received_bid = bid
+
+    def analyze_dans(self):
+        current_bid = self.received_bids[-1]
+        previous_bid = self.received_bids[-2]
+
+        # Utility change for our own agent
+        delta_m = self.profile.getUtility(current_bid) - self.profile.getUtility(previous_bid)
+        # Utility change for opponent model
+        delta_o = self.opponent_model.get_predicted_utility(current_bid) - self.opponent_model.get_predicted_utility(previous_bid)
+
+        self.utility_changes.append(delta_o)
+
+        if len(self.utility_changes) > 0:
+            self.avg_utility_change = sum(self.utility_changes) / len(self.utility_changes)
+
+        if len(self.utility_changes) >= 2:
+            variance = sum((x - self.avg_utility_change) ** 2 for x in self.utility_changes) / len(self.utility_changes)
+            self.std_utility_change = variance ** 0.5
+
+        category = self.categorize_dans(delta_m, delta_o)
+        self.dans_categories.append(category)
+
+        for x in self.dans_stats:
+            self.dans_stats[x] = self.dans_categories.count(x) / len(self.dans_categories)
+
+        if len(self.dans_categories) > 0:
+            selfish_count = self.dans_categories.count(self.SELFISH)
+            self.concession_rate = 1.0 - (selfish_count / len(self.dans_categories))
+
+
+    def categorize_dans(self, delta_m, delta_o):
+        gamma = self.gamma
+
+        if delta_o > gamma and delta_m > gamma:
+            return self.FORTUNATE
+        elif delta_o > gamma and delta_m < -gamma:
+            return self.SELFISH
+        elif delta_o < -gamma and delta_m > gamma:
+            return self.CONCESSION
+        elif delta_o < -gamma and delta_m < -gamma:
+            return self.UNFORTUNATE
+        elif -gamma <= delta_o <= gamma and delta_m > gamma:
+            return self.NICE
+        else:
+            return self.SILENT
+
+    def get_most_common_dans_category(self):
+        if not self.dans_categories:
+            return self.SILENT # just a default for when there is no data
+        max_count = 0
+        max_category = self.SILENT
+
+        for category in self.dans_stats:
+            count = self.dans_categories.count(category)
+            if count > max_count:
+                max_count = count
+                max_category = category
+        return max_category
+
 
     def my_turn(self):
         """This method is called when it is our turn. It should decide upon an action
@@ -180,8 +268,33 @@ class TemplateAgent(DefaultParty):
         Taking too much time might result in your agent being killed, so use it for storage only.
         """
         data = "Data for learning (see README.md)"
-        with open(f"{self.storage_dir}/data.md", "w") as f:
+
+        if self.opponent_model is None or self.other is None or len(self.received_bids) == 0:
+            return
+
+
+        data = f"# Opponent Model Data for {self.other}\n\n"
+
+        data += "## DANS Analysis\n\n"
+        data += f"Most common DANS category: {self.get_most_common_dans_category()}\n"
+        for category, value in self.dans_stats.items():
+            data += f"- {category}: {value:.4f}\n"
+
+        data += "\n## Concession Data\n\n"
+        data += f"Concession rate: {self.concession_rate:.4f}\n"
+        data += f"Average utility change: {self.avg_utility_change:.4f}\n"
+        data += f"Standard deviation of utility changes: {self.std_utility_change:.4f}\n"
+
+        data += "\n## Estimated Issue Weights\n\n"
+        for issue_id, estimator in self.opponent_model.issue_estimators.items():
+            data += f"- {issue_id}: {estimator.weight:.4f}\n"
+
+        with open(f"{self.storage_dir}/{self.other}_data.md", "w") as f:
             f.write(data)
+
+        self.logger.log(logging.INFO, f"Saved opponent data for {self.other}")
+
+
 
     ###########################################################################################
     ################################## Example methods below ##################################
