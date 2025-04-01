@@ -295,6 +295,28 @@ class TemplateAgent(DefaultParty):
         self.logger.log(logging.INFO, f"Saved opponent data for {self.other}")
 
 
+    # returns the recent DANS type (analyzes the behavior in the last few bids, currently set to 5)
+    def get_current_dans_type(self, window_size: int = 5) -> str:
+
+        if not self.dans_categories:
+            return self.SILENT
+
+        recent_categories = self.dans_categories[-window_size:]
+
+        temp_counts = {
+            self.FORTUNATE: 0,
+            self.SELFISH: 0,
+            self.CONCESSION: 0,
+            self.UNFORTUNATE: 0,
+            self.NICE: 0,
+            self.SILENT: 0
+        }
+
+        for cat in recent_categories:
+            temp_counts[cat] += 1
+
+        current_category = max(temp_counts, key=temp_counts.get)
+        return current_category
 
     ###########################################################################################
     ################################## Example methods below ##################################
@@ -315,6 +337,45 @@ class TemplateAgent(DefaultParty):
         ]
         return all(conditions)
 
+    # dynamically calculates the threshold of the bid, so minimum utility that we will accept for a bid (used in find bid)
+    def get_minimum_utility_threshold(self) -> float:
+        progress = self.progress.get(time() * 1000)
+
+        U_max = 0.95
+        U_min = 0.70
+
+        # b controls the function shape (so if we concede early or only at the end)
+        # b > 1 -> concede fast, b < 1 concede slowly, b = 1 -> linear model
+        # change dynamically from based on time prpgress
+        b_early = 0.5
+        b_late = 2.0
+        b = b_early + (b_late - b_early) * progress
+
+        # time-based function used as baseline (based on Faratin et al 1998)
+        baseline_threshold = U_min + (U_max - U_min) * (1.0 - progress ** (1.0 / b))
+
+        # check opponents most recent behavior
+        recent_dans = self.get_current_dans_type(window_size=5)
+
+        # adjust the threshold based on the opponents recent behavior (it can increase or decrease)
+        offset_map = {
+            self.FORTUNATE: 0.01,
+            self.SELFISH: 0.05,
+            self.CONCESSION: 0.02,
+            self.UNFORTUNATE: -0.02,
+            self.NICE: 0.01,
+            self.SILENT: 0.0
+        }
+
+        offset = offset_map.get(recent_dans, 0.0)
+
+        threshold = baseline_threshold * (1 + offset)
+
+        final_threshold = max(0.0, min(threshold, 1.0))
+
+        return final_threshold
+
+
     def find_bid(self) -> Bid:
         # compose a list of all possible bids
         domain = self.profile.getDomain()
@@ -323,12 +384,31 @@ class TemplateAgent(DefaultParty):
         best_bid_score = 0.0
         best_bid = None
 
-        # take 500 attempts to find a bid according to a heuristic score
-        for _ in range(500):
+        best_fallback_bid = None
+        best_fallback_score = 0.0
+
+        alpha, eps = self.compute_dynamic_parameters()
+
+        sample_size = min(all_bids.size(), 500)
+
+        for _ in range(sample_size):
             bid = all_bids.get(randint(0, all_bids.size() - 1))
-            bid_score = self.score_bid(bid)
-            if bid_score > best_bid_score:
-                best_bid_score, best_bid = bid_score, bid
+
+            bid_score = self.score_bid(bid, alpha, eps)
+
+            if bid_score > best_fallback_score:
+                best_fallback_bid, best_fallback_score = bid, bid_score
+
+            our_util = self.profile.getUtility(bid)
+
+            if our_util >= self.get_minimum_utility_threshold():
+                if bid_score > best_bid_score:
+                    best_bid_score, best_bid = bid_score, bid
+
+
+
+        if best_bid is None:
+            return best_fallback_bid
 
         return best_bid
 
@@ -358,3 +438,56 @@ class TemplateAgent(DefaultParty):
             score += opponent_score
 
         return score
+
+    # dynamically change eps and alpha
+    def compute_dynamic_parameters(self):
+        progress = self.progress.get(time() * 1000)
+
+        recent_categories = self.dans_categories[-5:]
+
+        if not recent_categories:
+            return (0.95, 0.2)
+
+        freq_map = {
+            self.FORTUNATE: 0.0,
+            self.SELFISH: 0.0,
+            self.CONCESSION: 0.0,
+            self.UNFORTUNATE: 0.0,
+            self.NICE: 0.0,
+            self.SILENT: 0.0
+        }
+
+        for cat in recent_categories:
+            freq_map[cat] += 1
+
+        for k in freq_map:
+            freq_map[k] /= len(recent_categories)
+
+        sorted_dans = sorted(freq_map.items(), key=lambda x: x[1], reverse=True)
+        top1, top2 = sorted_dans[0][0], sorted_dans[1][0]
+        w1, w2 = sorted_dans[0][1], sorted_dans[1][1]
+
+        def get_params(dans_type):
+            table = {
+                self.SELFISH: (1.00, 0.01),
+                self.CONCESSION: (0.92, 0.25),
+                self.FORTUNATE: (0.90, 0.5),
+                self.UNFORTUNATE: (1.00, 0.01),
+                self.NICE: (0.85, 0.4),
+                self.SILENT: (0.95, 0.2),
+            }
+            return table.get(dans_type, (0.95, 0.2))
+
+        a1, e1 = get_params(top1)
+        a2, e2 = get_params(top2)
+
+        alpha_base = (w1 * a1 + w2 * a2) / (w1 + w2 + 1e-6)
+        eps_base = (w1 * e1 + w2 * e2) / (w1 + w2 + 1e-6)
+
+        alpha = alpha_base * progress + (1.0 - progress) * 1.0
+        eps = eps_base * progress + (1.0 - progress) * 0.01
+
+        alpha = max(0.85, min(alpha, 1.0))
+        eps = max(0.01, min(eps, 0.5))
+
+        return alpha, eps
