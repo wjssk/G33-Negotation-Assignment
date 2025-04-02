@@ -1,0 +1,51 @@
+---
+title: "CAI Negotiation Assignment - Report on \"Results\" folder"
+author: "Group 33"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    keep_tex: yes
+    number_sections: yes
+header-includes:
+  - \usepackage{times}
+  - \usepackage{ijcai25}
+---
+
+\tableofcontents
+
+# About
+
+This document contains all runs in the Results folder of the repository.
+
+```{r setup, echo=FALSE}
+source("aana_utils.R")
+```
+
+```{r, echo=FALSE}
+repo_path <- "../cai-anl-33/"
+
+results_dir <- dir(paste(repo_path, 'results/', sep=''))
+cat(file=stderr(), sprintf("Results directory: %d entries", length(results_dir)))
+
+git_rev <- substr(system2(c("git", "-C", repo_path, "reflog"), stdout=TRUE), 1, 7)
+cat(file=stderr(), sprintf("Git revision '%s'", git_rev))
+```
+
+```{r, results="asis", echo=FALSE, warning=FALSE, fig.height=5.1, fig.width=6, fig.align='center'}
+
+cat(sprintf("Git repository at \\verb|%s|, version \\verb|%s|.", repo_path, git_rev))
+
+for (results in results_dir) {
+
+  cat(sprintf("\n\n# Results at %s\n", results))
+  result_data <- try(
+    read_results(repo_path, results_name = results)
+  )
+  if (inherits(result_data, "try-error")) {
+    cat(geterrmessage())
+    next;
+  }
+  
+  plot_run_results(result_data)
+}
+```
