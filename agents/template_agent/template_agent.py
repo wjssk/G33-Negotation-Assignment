@@ -335,8 +335,8 @@ class TemplateAgent(DefaultParty):
         bid_utility = self.profile.getUtility(received_bid)
 
         # time thresholds (to be optimized)
-        t = 0.8  # start using max-seen at 80% of time
-        t_prime = 0.98  # accept anything above reservation value after 98% of time
+        t = 0.9  # start using max-seen at 80% of time
+        t_prime = 0.99  # accept anything above reservation value after 98% of time
 
         # update the best seen only until we reach the MAX-All phase
         if (progress < t and bid_utility > self.max_seen_bid):
