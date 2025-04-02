@@ -73,6 +73,9 @@ class TemplateAgent(DefaultParty):
         self.utility_changes = []
         self.avg_utility_change = 0.0
         self.std_utility_change = 0.0
+
+        self.max_seen_bid = 0.0
+
         self.logger.log(logging.INFO, "party is initialized")
 
     def notifyChange(self, data: Inform):
@@ -250,13 +253,13 @@ class TemplateAgent(DefaultParty):
         """This method is called when it is our turn. It should decide upon an action
         to perform and send this action to the opponent.
         """
+        bid, bid_score = self.find_bid()
         # check if the last received offer is good enough
-        if self.accept_condition(self.last_received_bid):
+        if self.accept_condition(self.last_received_bid, bid_score):
             # if so, accept the offer
             action = Accept(self.me, self.last_received_bid)
         else:
             # if not, find a bid to propose as counter offer
-            bid = self.find_bid()
             action = Offer(self.me, bid)
 
         # send the action
@@ -322,20 +325,36 @@ class TemplateAgent(DefaultParty):
     ################################## Example methods below ##################################
     ###########################################################################################
 
-    def accept_condition(self, bid: Bid) -> bool:
-        if bid is None:
+    def accept_condition(self, received_bid: Bid, my_next_bid_score) -> bool:
+        if received_bid is None:
             return False
 
         # progress of the negotiation session between 0 and 1 (1 is deadline)
         progress = self.progress.get(time() * 1000)
 
-        # very basic approach that accepts if the offer is valued above 0.7 and
-        # 95% of the time towards the deadline has passed
+        bid_utility = self.profile.getUtility(received_bid)
+
+        # time thresholds (to be optimized)
+        t = 0.8  # start using max-seen at 80% of time
+        t_prime = 0.98  # accept anything above reservation value after 98% of time
+
+        # update the best seen only until we reach the MAX-All phase
+        if (progress < t and bid_utility > self.max_seen_bid):
+            self.max_seen_bid = bid_utility
+
+        # acceptance conditions
         conditions = [
-            self.profile.getUtility(bid) > 0.8,
-            progress > 0.95,
+            # Phase 1: Use ACnext (if our next planned bid is worse, accept)
+            bid_utility > my_next_bid_score if progress < t else False,
+
+            # Phase 2: Use MAX-All (accept only if offer is better than any previous offer)
+            bid_utility > self.max_seen_bid if t <= progress < t_prime else False,
+
+            # Phase 3: If we are close to the deadline, accept anything above reservation value
+            bid_utility > 0.0 if progress >= t_prime else False
         ]
-        return all(conditions)
+
+        return any(conditions)
 
     # dynamically calculates the threshold of the bid, so minimum utility that we will accept for a bid (used in find bid)
     def get_minimum_utility_threshold(self) -> float:
@@ -376,7 +395,7 @@ class TemplateAgent(DefaultParty):
         return final_threshold
 
 
-    def find_bid(self) -> Bid:
+    def find_bid(self):
         # compose a list of all possible bids
         domain = self.profile.getDomain()
         all_bids = AllBidsList(domain)
@@ -408,9 +427,9 @@ class TemplateAgent(DefaultParty):
 
 
         if best_bid is None:
-            return best_fallback_bid
+            return best_fallback_bid, best_fallback_score
 
-        return best_bid
+        return best_bid, best_bid_score
 
     def score_bid(self, bid: Bid, alpha: float = 0.95, eps: float = 0.1) -> float:
         """Calculate heuristic score for a bid
