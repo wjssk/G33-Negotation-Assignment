@@ -21,31 +21,34 @@ This document contains all runs in the Results folder of the repository.
 source("aana_utils.R")
 ```
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 repo_path <- "../cai-anl-33/"
-
-results_dir <- dir(paste(repo_path, 'results/', sep=''))
-cat(file=stderr(), sprintf("Results directory: %d entries", length(results_dir)))
-
-git_rev <- substr(system2(c("git", "-C", repo_path, "reflog"), stdout=TRUE), 1, 7)
-cat(file=stderr(), sprintf("Git revision '%s'", git_rev))
 ```
 
-```{r, results="asis", echo=FALSE, warning=FALSE, fig.height=5.1, fig.width=6, fig.align='center'}
+```{r, echo=FALSE}
+results_dir <- paste(repo_path, 'results/', sep='')
+results_dir_listing <- dir(results_dir)
+cat(file=stderr(), sprintf("\nResults directory: %d entries\n", length(results_dir_listing)))
+
+git_rev <- substr(system2(c("git", "-C", repo_path, "reflog"), stdout=TRUE), 1, 7)
+cat(file=stderr(), sprintf("\nGit revision '%s'\n", git_rev))
+```
+
+```{r, results="asis", echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.1, fig.width=6, fig.align='center'}
 
 cat(sprintf("Git repository at \\verb|%s|, version \\verb|%s|.", repo_path, git_rev))
 
-for (results in results_dir) {
+for (results in results_dir_listing) {
 
-  cat(sprintf("\n\n# Results at %s\n", results))
+  cat(sprintf("\n\\clearpage\n\n# Results at %s\n", results))
+  
   result_data <- try(
-    read_results(repo_path, results_name = results)
+    read_results(results_dir, results)
   )
   if (inherits(result_data, "try-error")) {
-    cat(geterrmessage())
     next;
+  } else {
+    plot_run_results(result_data)
   }
-  
-  plot_run_results(result_data)
 }
 ```

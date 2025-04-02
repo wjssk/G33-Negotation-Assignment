@@ -9,9 +9,9 @@ run_agents <- function (repo_path, venv_dir, results_dir, results_name, agent1, 
   
   use_virtualenv(paste(repo_path, venv_dir, sep=''))
   
-  message("Python initialized - OK.")
-  
   file.copy("run_from_r.py", paste(repo_path, "run_from_r.py", sep=''))
+  
+  py_eval("0")
   
   py$results_dir <- paste(getwd(), results_dir, sep='/')
   py$results_name <- results_name
@@ -20,16 +20,17 @@ run_agents <- function (repo_path, venv_dir, results_dir, results_name, agent1, 
   py$profile1 <- paste(repo_path, profile1, sep='')
   py$profile2 <- paste(repo_path, profile2, sep='')
   
-  py_run_file(paste(repo_path, "run_from_r.py", sep=''))
-}
-
-read_results_json <- function (repo_path, results_name) {
-  cat(file=stderr(), sprintf("Reading the results from %s\n", results))
-  json_path <- paste(repo_path, 'results/', results, '/session_results_trace.json', sep='')
-  jsonlite::fromJSON(json_path)
+  py_run_file(paste(repo_path, "run_from_r.py", sep=''), convert = FALSE)
 }
 
 read_results <- function (repo_path, results_name) {
+  
+  read_results_json <- function (results_dir, results) {
+    cat(file=stderr(), sprintf("\nReading the results for %s\n", results))
+    json_path <- paste(results_dir, results, '/session_results_trace.json', sep='')
+    jsonlite::fromJSON(json_path)
+  }
+  
   json <- read_results_json(repo_path, results_name)
   
   agents <- sapply(json$settings$SAOPSettings$participants$TeamInfo$parties, 
@@ -53,11 +54,14 @@ read_results <- function (repo_path, results_name) {
                     levels=connections, labels=c("Agent1", "Agent2"))
   
   accepted_bids <- which(!is.na(accepts))
+  if (is.null(json$actions$Accept)) {
+    stop("The run failed. No bid was accepted.")
+  }
   if (accepted_bids != c(length(data$Utility1) + 1)) {
     stop(sprintf("Expected accepted bid at %d, got %s\n", length(data) + 1, accepted_bids))
   }
   
-  return (list(data, connections, agents, duration))
+  return (list(data, connections, agents, duration, json))
 }
 
 profile_utilities <- function (util_json) {
@@ -70,19 +74,24 @@ profile_utilities <- function (util_json) {
   apply(combos, MARGIN=1, FUN=function(x) {sum(x * t(weights))})
 }
 
-read_utilities_json <- function (repo_path, results_name) {
-  json <- read_results_json(repo_path, results_name)
+read_utilities_json <- function (repo_path, results_name, results_json) {
+  json <- results_json
   
   connections <- json$connections
-  util1_file <- paste(repo_path,
-                      substr(json$partyprofiles[[connections[1]]]$profile, 6, 999), sep='')
-  util2_file <- paste(repo_path,
-                      substr(json$partyprofiles[[connections[2]]]$profile, 6, 999), sep='')
   
-  cat(file=stderr(), sprintf("Reading utility data for agent 1 from \n    %s", util1_file))
+  util_filename <- function(x) {
+    path <- substr(x, 6, 999)
+    if (substr(path, 1, 1) == '/') {
+      return (path)
+    } else {
+      return (paste(repo_path, path, sep=''))
+    }
+  }
+  
+  util1_file <- util_filename(json$partyprofiles[[connections[1]]]$profile)
+  util2_file <- util_filename(json$partyprofiles[[connections[2]]]$profile)
+  
   util1_json <- jsonlite::fromJSON(util1_file)
-  
-  cat(file=stderr(), sprintf("Reading utility data for agent 2 from \n    %s", util2_file))
   util2_json <- jsonlite::fromJSON(util2_file)
   
   return (list(util1_json, util2_json))
@@ -91,12 +100,18 @@ read_utilities_json <- function (repo_path, results_name) {
 # NAs at start = NA, the rest is cumulative minimum ignoring NAs
 cummin_na <- function(x) {
   first_num = which(!is.na(x))[1]
+  if (is.na(first_num)) {
+    return (x)
+  }
   rest <- x[seq(first_num, length(x))]
   rest[is.na(rest)] <- max(na.omit(x))
   c(rep(NA, first_num - 1), cummin(rest))
 }
 cummax_na <- function(x) {
   first_num = which(!is.na(x))[1]
+  if (is.na(first_num)) {
+    return (x)
+  }
   rest <- x[seq(first_num, length(x))]
   rest[is.na(rest)] <- min(na.omit(x))
   c(rep(NA, first_num - 1), cummax(rest))
@@ -107,15 +122,18 @@ paretos <- function(x) {
   na.omit(x[x[,2] == cummax_na(x[,2]),])
 }
 
+agent_name <- function(x) {
+  sp <- strsplit(x, "\\.")[[1]]
+  sp[length(sp)]
+}
+
 plot_run_results <- function (result_data) {
   
   data <- result_data[[1]]
   connections <- result_data[[2]]
-  agents <- sapply(result_data[[3]], function(x) {
-    sp <- strsplit(x, "\\.")[[1]]
-    sp[length(sp)]
-  })
+  agents <- sapply(result_data[[3]], agent_name)
   duration <- result_data[[4]]
+  json <- result_data[[5]]
   
   cat("\nAgents in the negotiation: \n\\begin{itemize}\n")
   for (agent in agents) {
@@ -185,7 +203,7 @@ plot_run_results <- function (result_data) {
          col=colors[c(NA, 1, 2, NA, 3, 4, NA, 3, 4)],
          lwd=3, cex=0.7)
   
-  utils_jsons <- read_utilities_json(repo_path, results_name)
+  utils_jsons <- read_utilities_json(repo_path, results_name, json)
   all_utils <- sapply(utils_jsons, profile_utilities)
   
   plot(all_utils, pch=16, cex=0.2, col='gray60', asp=1, main="Utility space",

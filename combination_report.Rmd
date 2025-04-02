@@ -1,0 +1,158 @@
+---
+title: "CAI Negotiation Assignment - Report on a combination of runs"
+author: "Group 33"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    keep_tex: yes
+    number_sections: yes
+header-includes:
+  - \usepackage{times}
+  - \usepackage{ijcai25}
+---
+
+\tableofcontents
+
+# About
+
+This document is a report on a single combination of agents and domain.
+The task is run twice for domain symmetry.
+
+```{r setup, echo=FALSE}
+source("aana_utils.R")
+```
+
+```{r, echo=FALSE, results='asis'}
+repo_path <- "../cai-anl-33/"
+venv_dir <- "venv"
+
+# !!
+# CHANGE THIS to simulate again. (or delete the results files)
+# !!
+run_label <- "run02"
+
+# slashes are important :o
+run_dir <- "single_runs/"
+
+agents = c(
+  "agents.ANL2022.dreamteam109_agent.dreamteam109_agent.DreamTeam109Agent",
+  "agents.ANL2022.micro_agent.micro_agent.micro_agent.MiCROAgent"
+)
+domain = "domain01"
+
+cat(sprintf("\nThe run label is \\verb|%s|.", run_label))
+```
+
+```{r run_agent_left, results='hide', echo=FALSE}
+
+run_name <- paste(run_label, "left", sep='-')
+
+if (!dir.exists(paste(run_dir, run_name, sep=''))) {
+  cat("\nRunning agents: \n", file=stderr())
+  cat(paste(agents, sep="\n"), file=stderr())
+  cat("\nThis shouldn't take more than 10 seconds...\n", file=stderr())
+  run_agents(repo_path, "venv", "single_runs/", run_name, 
+      agents[1],
+      agents[2],
+      paste("domains", domain ,"profileA.json", sep='/'),
+      paste("domains", domain ,"profileB.json", sep='/')
+  )
+} else {
+  cat("\nNot running, results exist. To re-simulate, delete them or change the run name.\n", file=stderr())
+}
+
+```
+
+```{r, results="asis", echo=FALSE, warning=FALSE, fig.height=5.1, fig.width=6, fig.align='center'}
+
+cat("\n# Results for the left-hand-side run\n")
+
+
+left_data <- try(
+  read_results(run_dir, run_name)
+)
+
+if (inherits(left_data, "try-error")) {
+  cat(geterrmessage())
+} else {
+  plot_run_results(left_data)
+}
+```
+
+```{r run_agent_right, results='hide', echo=FALSE}
+
+run_name <- paste(run_label, "right", sep='-')
+
+if (!dir.exists(paste(run_dir, run_name, sep=''))) {
+  cat("\nRunning agents: \n", file=stderr())
+  cat(paste(agents, sep="\n"), file=stderr())
+  cat("\nThis shouldn't take more than 10 seconds...\n", file=stderr())
+  run_agents(repo_path, "venv", "single_runs/", run_name, 
+      agents[1],
+      agents[2],
+      paste("domains", domain ,"profileB.json", sep='/'),
+      paste("domains", domain ,"profileA.json", sep='/')
+  )
+} else {
+  cat("\nNot running, results exist. To re-simulate, delete them or change the run name.\n", file=stderr())
+}
+
+```
+
+```{r, results="asis", echo=FALSE, warning=FALSE, fig.height=5.1, fig.width=6, fig.align='center'}
+
+cat("\n# Results for the right-hand-side run\n")
+
+right_data <- try(
+  read_results(run_dir, run_name)
+)
+
+if (inherits(right_data, "try-error")) {
+  cat(geterrmessage())
+} else {
+  plot_run_results(right_data)
+}
+```
+
+# Evaluation
+
+After running the two agents on the same domain from both ends, we can identify
+(by taking the utility difference) which agent seems to have an advantage.
+
+```{r, results="asis", echo=FALSE}
+
+if (inherits(left_data, "try-error")) {
+  final1_left <- 0
+  final2_left <- 0
+} else {
+  util1_left <- left_data[[1]]$Utility1
+  util2_left <- left_data[[1]]$Utility2
+  n_left <- length(util1_left)
+  final1_left <- util1_left[n_left]
+  final2_left <- util2_left[n_left]
+}
+
+# flipped because of switched agent positions
+if (inherits(right_data, "try-error")) {
+  final1_right <- 0
+  final2_right <- 0
+} else {
+  util1_right <- right_data[[1]]$Utility1
+  util2_right <- right_data[[1]]$Utility2
+  n_right <- length(util1_right)
+  final1_right <- util1_right[n_right]
+  final2_right <- util2_right[n_right]
+}
+
+total_util1 = final1_left + final1_right
+total_util2 = final2_left + final2_right
+
+agent_labels = sapply(agents, agent_name)
+
+```
+
+Final utility values:
+\begin{itemize}
+  \item `r agent_labels[1]`: `r total_util1`
+  \item `r agent_labels[2]`: `r total_util2`
+\end{itemize}
