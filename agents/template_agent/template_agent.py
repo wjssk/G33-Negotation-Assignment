@@ -54,6 +54,7 @@ class TemplateAgent(DefaultParty):
         self.other: str = None
         self.settings: Settings = None
         self.storage_dir: str = None
+        self.param_values = None
 
         self.last_received_bid: Bid = None
         self.opponent_model: OpponentModel = None
@@ -98,6 +99,12 @@ class TemplateAgent(DefaultParty):
 
             self.parameters = self.settings.getParameters()
             self.storage_dir = self.parameters.get("storage_dir")
+            self.param_values = {}
+            for k, v in self.parameters.getParameters().items():
+                try:
+                    self.param_values[k] = float(v)
+                except ValueError:
+                    continue
 
             # the profile contains the preferences of the agent over the domain
             profile_connection = ProfileConnectionFactory.create(
@@ -366,8 +373,8 @@ class TemplateAgent(DefaultParty):
         # b controls the function shape (so if we concede early or only at the end)
         # b > 1 -> concede fast, b < 1 concede slowly, b = 1 -> linear model
         # change dynamically from based on time prpgress
-        b_early = 0.5
-        b_late = 2.0
+        b_early = self.param_values.get("b_early", 0.5)
+        b_late = self.param_values.get("b_late", 2.0)
         b = b_early + (b_late - b_early) * progress
 
         # time-based function used as baseline (based on Faratin et al 1998)
