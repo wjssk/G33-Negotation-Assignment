@@ -3,25 +3,6 @@ knitr::opts_chunk$set(echo = FALSE)
 library(grid)
 library(gridExtra)
 library(scales)
-library(reticulate)
-
-run_agents <- function (repo_path, venv_dir, results_dir, results_name, agent1, agent2, profile1, profile2) {
-  
-  use_virtualenv(paste(repo_path, venv_dir, sep=''))
-  
-  file.copy("run_from_r.py", paste(repo_path, "run_from_r.py", sep=''))
-  
-  py_eval("0")
-  
-  py$results_dir <- paste(getwd(), results_dir, sep='/')
-  py$results_name <- results_name
-  py$agent1 <- agent1
-  py$agent2 <- agent2
-  py$profile1 <- paste(repo_path, profile1, sep='')
-  py$profile2 <- paste(repo_path, profile2, sep='')
-  
-  py_run_file(paste(repo_path, "run_from_r.py", sep=''), convert = FALSE)
-}
 
 read_results <- function (repo_path, results_name) {
   
