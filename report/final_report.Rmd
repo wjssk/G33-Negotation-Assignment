@@ -2,31 +2,34 @@
 title: "CAI Negotiation Assignment - Group 33 Final Report"
 author: "Group 33"
 date: "`r Sys.Date()`"
-bibliography: citations.bib
-output: 
+output:
+  word_document: default
   pdf_document:
-    keep_tex: yes
-    number_sections: yes
+    keep_tex: true
+    number_sections: true
+  html_document:
+    df_print: paged
+bibliography: citations.bib
 header-includes:
-  - \pdfpagewidth=8.5in
-  - \pdfpageheight=11in
-  - \usepackage{times}
-  - \usepackage{ijcai25}
-  - \usepackage{soul}
-  - \usepackage{url}
-  - \usepackage[hidelinks]{hyperref}
-  - \usepackage[utf8]{inputenc}
-  - \usepackage[small]{caption}
-  - \usepackage{graphicx}
-  - \usepackage{amsmath}
-  - \usepackage{amsthm}
-  - \usepackage{booktabs}
-  - \usepackage{algorithm}
-  - \usepackage{algorithmic}
-  - \usepackage[switch]{lineno}
-  - \urlstyle{same}
-editor_options: 
-  markdown: 
+- \pdfpagewidth=8.5in
+- \pdfpageheight=11in
+- \usepackage{times}
+- \usepackage{ijcai25}
+- \usepackage{soul}
+- \usepackage{url}
+- \usepackage[hidelinks]{hyperref}
+- \usepackage[utf8]{inputenc}
+- \usepackage[small]{caption}
+- \usepackage{graphicx}
+- \usepackage{amsmath}
+- \usepackage{amsthm}
+- \usepackage{booktabs}
+- \usepackage{algorithm}
+- \usepackage{algorithmic}
+- \usepackage[switch]{lineno}
+- \urlstyle{same}
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -46,8 +49,8 @@ editor_options:
 
 Multi-agent negotiation is a task for artificially intelligent and
 autonomous systems that involves consensus decision-making. This report
-focuses on bilateral negotiations between two agents supporting the
-Stacked Alternating Offers Protocol (SOAP) [@soap].
+focuses on bilateral negotiations between two agents supporting SOAP,
+the Stacked Alternating Offers Protocol [@soap].
 
 # Design
 
@@ -89,6 +92,22 @@ $\text{SELFISH}$, $\text{NICE}$, and $\text{SILENT}$. The thresholds
 that inform category selection used were taken from @eli-dans.
 
 ## Acceptance criteria
+
+# Implementation
+
+The agent was implemented in Python 3.9 and is fully compatible with the
+GeniusWeb capabilities in use for the Automated Negotiating Agents
+Competition (ANAC) 2023 and Automated Negotiation League (ANL) 2023. All
+contributions by the authors of this report are extensions of the
+`TemplateAgent` package in the ANL 2023 example agent repository[^1] by
+Bram Renting and collaborators. This section describes the structure of
+our implementation and corresponding methods in the source code.
+
+[^1]: <https://github.com/brenting/ANL-2023-example-agent>
+
+## Implementation of the DANS model
+
+Put a description and list of methods here...
 
 # Optimization
 
