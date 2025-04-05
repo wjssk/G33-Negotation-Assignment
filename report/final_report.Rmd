@@ -124,6 +124,30 @@ the best next action, such as by judging the dominant characteristic of
 the opponent. We consider this data an extension of the opponent model,
 as it serves to inform the decision-making process.
 
+```{r dans, cache=TRUE, echo=FALSE, out.width="100%", fig.align='left', fig.height=4}
+gamma <- 0.02
+
+plot(x=NA, xlim=c(-0.07,0.07), ylim=c(-0.07,0.07), asp=0.8, axes=FALSE,
+     xlab=expression(Delta~"o (change in opponent utility)"),
+     ylab=expression(Delta~"m (change in own utility)"))
+axis(1, at=c(-0.05, 0.05))
+axis(2, at=c(-0.05, 0.05))
+abline(v=gamma, col='gray')
+abline(v=-gamma, col='gray')
+abline(h=gamma, col='gray')
+abline(h=-gamma, col='gray')
+text(x=0.08, y=0.05, "FORTUNATE", col='seagreen')
+text(x=0.08, y=-0.05, "SELFISH", col='firebrick')
+text(x=-0.08, y=0.05, "CONCESSION", col='seagreen')
+text(x=-0.08, y=-0.05, "UNFORTUNATE", col='firebrick')
+text(x=0, y=0.05, "NICE", col='seagreen')
+text(x=0, y=0, "QUIET", col='gray')
+text(x=0.08, y=0, "QUIET", col='gray')
+text(x=-0.08, y=0, "QUIET", col='gray')
+text(x=0, y=-0.05, "QUIET", col='gray')
+
+```
+
 ## Bidding strategy
 
 @faratin propose two approaches to the question of bidding: time-based,
@@ -131,7 +155,49 @@ where the agent concedes more as the deadline approaches, and
 behavior-based, where each bid is a response to opponent behavior.
 
 Our bidding strategy combines the two, making use of all available
-information.\
+information.
+
+First, we define a function
+$\rho: (\Omega, \mathbb{R}, \mathbb{R}) \to \mathbb{R}$ that computes a
+numeric score for each bid. This score is distinct from the bid utility
+in that it instead represents how suitable the bid is for this stage of
+the negotiation. Its numeric parameters are $\alpha$ (the selfishness of
+the bid) and $\epsilon$ (the concession rate), which are given by the
+DANS classification and a multiplier that changes as the negotiation
+progresses.
+
+```{r alpha, cache=TRUE, echo=FALSE, out.width="100%", fig.align='left', fig.height=4}
+alpha_base <- 0.3
+eps_base <- 0.6
+progress <- seq(0, 1, 0.01)
+
+alpha = alpha_base * progress + (1.0 - progress) * 1.0
+epsilon = eps_base * progress + (1.0 - progress) * 0.01
+
+layout(matrix(c(1, 2), nrow=1, ncol=2))
+
+plot(x=progress, y=alpha, type='l', xaxp=c(0,1,1), ylim=c(0,1), asp=1, axes = FALSE,
+     main=expression(alpha ~ " multiplier over time"),
+     ylab=expression(alpha ~ "(selfishness parameter)"))
+abline(alpha_base, 0, lty='dotted', col='firebrick1')
+text(x=0.4, y=alpha_base-0.05, expression(alpha ~ " based on DANS"), col='firebrick')
+axis(1, at=c(0, 1))
+axis(2, at=seq(0, 1, 0.5))
+
+plot(x=progress, y=epsilon, type='l', xaxp=c(0,1,1), ylim=c(0,1), asp=1, axes = FALSE,
+     main=expression(epsilon ~ " multiplier over time"),
+     ylab=expression(epsilon ~ "(concession parameter)"))
+abline(eps_base, 0, lty='dotted', col='firebrick1')
+text(x=0.4, y=eps_base+0.05, expression(epsilon ~ " based on DANS"), col='firebrick')
+axis(1, at=c(0, 1))
+axis(2, at=seq(0, 1, 0.5))
+
+
+```
+
+## Acceptance strategy
+
+Description of the acceptance strategy goes here
 
 # Implementation
 
