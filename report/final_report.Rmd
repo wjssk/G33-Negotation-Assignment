@@ -3,10 +3,10 @@ title: "CAI Negotiation Assignment - Group 33 Final Report"
 author: "Group 33"
 date: "`r Sys.Date()`"
 output:
-  word_document: default
   pdf_document:
     keep_tex: true
     number_sections: true
+  word_document: default
   html_document:
     df_print: paged
 bibliography: citations.bib
@@ -49,49 +49,89 @@ editor_options:
 
 Multi-agent negotiation is a task for artificially intelligent and
 autonomous systems that involves consensus decision-making. This report
-focuses on bilateral negotiations between two agents supporting SOAP,
-the Stacked Alternating Offers Protocol [@soap].
+focuses on bilateral negotiations between two agents supporting SAOP,
+the Stacked Alternating Offers Protocol [@saop].
 
 # Design
 
-Our agent's goal is to optimize its own utility. To do this, it must
-make competitive bids and concede minimally, finding the highest-utility
-bid that the opponent will also accept. A key part of this is
-identifying the opponent's strategy.
+Our agent's goal is optimization of its individual utility. To do this,
+iot must make competitive bids and concede minimally, finding the
+highest-utility bid that the opponent will also accept. A key part of
+this is identifying the opponent's strategy.
 
-To accomplish this, our agent is designed around two modules: the
-opponent model and the bidding and acceptance strategy. The opponent
-model, with access to both agents' bid history, performs a DANS analysis
-in each time step to produce a behavior verdict for each bid. The
-time-series history of DANS verdicts is then used in the bidding and
-acceptance strategy to decide on the best next action, such as by
-judging the dominant characteristic of the opponent.
+To accomplish this, our agent is designed around a BOA architecture
+[@baarslag]. Its architecture is composed of the bidding strategy,
+opponent model, and acceptance strategy as three high-level modules. BOA
+was chosen because it excels in flexibility, allowing us to create a
+more effective agent by combining innovations to each of its parts. This
+section will describe them in sequence.
 
-## DANS
+## Baseline opponent model
 
-In summary, DANS analysis employed by the agent is a data-driven
-approach that uses the change in bid to identify opponent behavior.
+If the negotiation domain $\Omega$ is said to contain all possible
+offers $\omega \in \Omega$, the agent already knows its own utility
+function $u_m: \Omega \to \mathbb{R}$ and thus also the utility
+$u_m(\omega)$ for all such offers. However, the opponent's function
+$u_o: \Omega \to \mathbb{R}$ and values $u_o(\omega)$ are unknown. As
+defined by @baarslag, the principle of the opponent model is to predict
+$u_o(\omega)$.
+
+Our agent utilizes the development template for ANAC 2023, which
+implements a statistical opponent model. The `IssueEstimator` and
+`ValueEstimator` classes are part of the `TemplateAgent`, and their
+functionality will not be discussed here in detail. The implementation
+uses frequency of received bids to provide an estimator
+$\hat u_o: \Omega \to \mathbb{R}$ for the opponent's utility. The
+implementation supports linear additive utility spaces only.
+
+## DANS extended opponent model
+
+As an extension of the provided estimator $\hat u_o$, we use DANS
+analysis to identify the opponent's behavior based on the bid history.
+DANS is a data-driven approach that uses the opponent's bid change
+between consecutive time steps to classify bidding behavior.
 
 The process assigns a category verdict to each bid based on the current
 and previous time step. In doing this, DANS considers only the
-opponent's offers. It uses the following two values:
+opponent's offers. First, take the last two offers in the opponent's bid
+history $B_o$:
 
--   $\Delta m$ for change in the agent's utility $m$
+$$
+\omega_i, ~\omega_{i-1} ~~~ \text{where} ~~~ B_o = \{..., ~\omega_{i-1}, ~\omega_{i}\} 
+$$
 
--   $\Delta o$ for change in the opponent agent's predicted utility $o$
+Next, define the two values to be used in classifying the behavior:
 
-The first of the prerequisite values, $m$, is trivially available to the
-agent. The opponent agent's predicted utility $o$ is determined using
-through statistical estimation. The `IssueEstimator` and
-`ValueEstimator` classes are part of the `TemplateAgent` development
-suite for ANAC 2023, and their functionality will not be discussed here
-in detail.
+-   $\Delta m$ for change in our agent's utility:
 
-The five classes produced are $\text{FORTUNATE}$, $\text{UNFORTUNATE}$,
-$\text{SELFISH}$, $\text{NICE}$, and $\text{SILENT}$. The thresholds
-that inform category selection used were taken from @eli-dans.
+    $$
+    \Delta m = u_s(\omega_{i}) - u_s(\omega_{i-1}) 
+    $$
 
-## Acceptance criteria
+-   $\Delta o$ for change in the opponent agent's utility (using the
+    estimator):
+
+    $$
+    \Delta o = \hat u_o(\omega_{i}) - \hat u_o(\omega_{i-1}) 
+    $$
+
+Using thresholds on these values, one class is selected from the
+following five: $\text{FORTUNATE}$, $\text{UNFORTUNATE}$,
+$\text{SELFISH}$, $\text{NICE}$, and $\text{SILENT}$. These describe the
+likely cause of the opponent's bid. The time-series history of DANS
+classes is then used in the bidding and acceptance strategy to decide on
+the best next action, such as by judging the dominant characteristic of
+the opponent. We consider this data an extension of the opponent model,
+as it serves to inform the decision-making process.
+
+## Bidding strategy
+
+@faratin propose two approaches to the question of bidding: time-based,
+where the agent concedes more as the deadline approaches, and
+behavior-based, where each bid is a response to opponent behavior.
+
+Our bidding strategy combines the two, making use of all available
+information.\
 
 # Implementation
 
@@ -107,7 +147,9 @@ our implementation and corresponding methods in the source code.
 
 ## Implementation of the DANS model
 
-Put a description and list of methods here...
+## Implementation of the bidding strategy
+
+## Implementation of the acceptance strategy
 
 # Optimization
 
@@ -155,5 +197,9 @@ We acknowledge the support and instruction of Carolina Jorge, Ruben
 Verhagen, Myrthe Tielman, and Pradeep K. Murukannaiah of Interactive
 Intelligence at Delft University of Technology. We thank the Teaching
 Assistants.
+
+# Work distribution {.unnumbered}
+
+Group 33 distributed the work equally.
 
 # References {.unnumbered}
