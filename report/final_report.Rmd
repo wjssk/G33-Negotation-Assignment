@@ -1,0 +1,121 @@
+---
+title: "CAI Negotiation Assignment - Group 33 Final Report"
+author: "Group 33"
+date: "`r Sys.Date()`"
+bibliography: citations.bib
+output: 
+  pdf_document:
+    keep_tex: yes
+    number_sections: yes
+header-includes:
+  - \pdfpagewidth=8.5in
+  - \pdfpageheight=11in
+  - \usepackage{times}
+  - \usepackage{ijcai25}
+  - \usepackage{soul}
+  - \usepackage{url}
+  - \usepackage[hidelinks]{hyperref}
+  - \usepackage[utf8]{inputenc}
+  - \usepackage[small]{caption}
+  - \usepackage{graphicx}
+  - \usepackage{amsmath}
+  - \usepackage{amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{algorithm}
+  - \usepackage{algorithmic}
+  - \usepackage[switch]{lineno}
+  - \urlstyle{same}
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\tableofcontents
+
+\vspace{2em}
+
+\begin{abstract}
+
+  This report describes a novel implementation of an autonomous agent
+  for bilateral negotiation using a DANS opponent model and
+  optimized acceptance criteria.
+
+\end{abstract}
+
+# Introduction
+
+Multi-agent negotiation is a task for artificially intelligent and
+autonomous systems that involves consensus decision-making. This report
+focuses on bilateral negotiations between two agents supporting the SOAP
+protocol.
+
+The GeniusWeb framework is a playground for bilateral agent negotiation.
+
+# Design
+
+Our agent's goal is to optimize its own utility. To do this, it must
+make competitive bids and concede minimally, finding the highest-utility
+bid that the opponent will also accept. A key part of this is
+identifying the opponent's strategy.
+
+To accomplish this, our agent is designed to use two separate modules:
+the opponent model and the bidding and acceptance strategy. The opponent
+model, with access to both agents' bid history, performs a DANS analysis
+in each time step to produce a behavior verdict for each bid. The
+time-series history of DANS verdicts is then used in the bidding and
+acceptance strategy to decide on the best next action, such as by
+judging the dominant characteristic of the opponent.
+
+## DANS
+
+In summary, DANS analysis employed by the agent is a data-driven
+approach that uses the change in bid to identify opponent behavior.
+
+The process assigns a category verdict to each bid based on the current
+and previous time step. In doing this, DANS considers only the
+opponent's offers. It uses the following two values:
+
+-   $\Delta m$ for change in the agent's utility $m$
+
+-   $\Delta o$ for change in the opponent agent's predicted utility $o$
+
+The first of the prerequisite values, $m$, is trivially available to the
+agent. The opponent agent's predicted utility $o$ is determined using
+through statistical estimation. The `IssueEstimator` and
+`ValueEstimator` classes are part of the `TemplateAgent` development
+suite for ANAC 2023, and their functionality will not be discussed here
+in detail.
+
+The five classes produced are $\text{FORTUNATE}$, $\text{UNFORTUNATE}$,
+$\text{SELFISH}$, $\text{NICE}$, and $\text{SILENT}$. The thresholds
+that inform category selection used were taken from @eli-dans.
+
+## Acceptance criteria
+
+# Optimization
+
+## Bayesian optimization
+
+# Evaluation
+
+## Performance against other agents
+
+## Limitations
+
+# Conclusion
+
+# Ethical Statement {.unnumbered}
+
+While there are no ethical issues with the design and implementation of
+our autonomous agent, @agent-ethics writes that such issues may arise
+when self-serving negotiation agents such as ours are applied in
+sensitive contexts.
+
+# Acknowledgments {.unnumbered}
+
+We acknowledge the support and instruction of Carolina Jorge, Ruben
+Verhagen, Myrthe Tielman, and Pradeep K. Murukannaiah of Interactive
+Intelligence at Delft University of Technology. We thank the Teaching
+Assistants.
+
+# References {.unnumbered}
