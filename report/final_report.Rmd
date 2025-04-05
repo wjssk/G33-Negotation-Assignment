@@ -46,10 +46,8 @@ editor_options:
 
 Multi-agent negotiation is a task for artificially intelligent and
 autonomous systems that involves consensus decision-making. This report
-focuses on bilateral negotiations between two agents supporting the SOAP
-protocol.
-
-The GeniusWeb framework is a playground for bilateral agent negotiation.
+focuses on bilateral negotiations between two agents supporting the
+Stacked Alternating Offers Protocol (SOAP) [@soap].
 
 # Design
 
@@ -58,8 +56,8 @@ make competitive bids and concede minimally, finding the highest-utility
 bid that the opponent will also accept. A key part of this is
 identifying the opponent's strategy.
 
-To accomplish this, our agent is designed to use two separate modules:
-the opponent model and the bidding and acceptance strategy. The opponent
+To accomplish this, our agent is designed around two modules: the
+opponent model and the bidding and acceptance strategy. The opponent
 model, with access to both agents' bid history, performs a DANS analysis
 in each time step to produce a behavior verdict for each bid. The
 time-series history of DANS verdicts is then used in the bidding and
@@ -94,15 +92,36 @@ that inform category selection used were taken from @eli-dans.
 
 # Optimization
 
-## Bayesian optimization
+The implementation of our agent includes 'tuning' parameters. We
+leverage Bayesian optimization to find an optimum value for each
+parameter based on testing with a set of known agents.
 
 # Evaluation
 
+The final stage of our optimization procedure is the source of data for
+our evaluation. We run the agent against a cross product of 50 test
+agents and 5 randomly selected preference domains. The data that results
+from this testing is discussed in this chapter as an indicator of our
+agent's performance and limitations.
+
 ## Performance against other agents
+
+The data should indicate that we perform well for individual utility
+against a variety of opponent agents.
 
 ## Limitations
 
+### Learning agents
+
+The data suggests good performance in one-shot learning agents. However,
+the evaluation does not consider advanced learning agents that could
+presumably gain an advantage over a number of 'training' runs against
+our implementation.
+
 # Conclusion
+
+In conclusion, we have shown that a DANS-based opponent model is a
+viable strategy for autonomous negotiation.
 
 # Ethical Statement {.unnumbered}
 
