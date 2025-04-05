@@ -22,7 +22,7 @@ source("aana_utils.R")
 ```
 
 ```{r, echo=TRUE}
-repo_path <- "../cai-anl-33/"
+repo_path <- "../"
 ```
 
 ```{r, echo=FALSE}
@@ -30,7 +30,7 @@ results_dir <- paste(repo_path, 'results/', sep='')
 results_dir_listing <- dir(results_dir)
 cat(file=stderr(), sprintf("\nResults directory: %d entries\n", length(results_dir_listing)))
 
-git_rev <- substr(system2(c("git", "-C", repo_path, "reflog"), stdout=TRUE), 1, 7)
+git_rev <- substr(system2(c("git", "-C", repo_path, "reflog"), stdout=TRUE), 1, 7)[1]
 cat(file=stderr(), sprintf("\nGit revision '%s'\n", git_rev))
 ```
 
