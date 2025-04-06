@@ -1,7 +1,7 @@
 ---
 title: "CAI Negotiation Assignment - Group 33 Final Report"
-author: "Group 33"
-date: "`r Sys.Date()`"
+author: "Maja Czerwińska, Paulina Sobocińska, Eli Shamayev, and Lukáš Chládek"
+date: "April 6th, 2025"
 output:
   pdf_document:
     keep_tex: true
@@ -26,6 +26,7 @@ header-includes:
 - \usepackage{booktabs}
 - \usepackage{algorithm}
 - \usepackage{algorithmic}
+- \usepackage{multicol}
 - \usepackage[switch]{lineno}
 - \urlstyle{same}
 editor_options:
@@ -33,19 +34,21 @@ editor_options:
     wrap: 72
 ---
 
-\tableofcontents
 
 \vspace{2em}
 
 \begin{abstract}
 
   This report describes a novel implementation of an autonomous agent
-  for bilateral negotiation using a DANS opponent model and
-  optimized acceptance criteria.
+  for bilateral negotiation using a BOA (bidding strategy, opponent model,
+  acceptance strategy) architecture. The authors
+  demonstrate that an agent with an opponent-strategy model and the
+  appropriate decision-making strategy can outperform a wide range
+  of ANAC 2023 agents.
 
 \end{abstract}
 
-```{r setup, echo="FALSE"}
+```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       results = "hide")
 library(scales)
@@ -58,10 +61,17 @@ autonomous systems that involves consensus decision-making. This report
 focuses on bilateral negotiations between two agents supporting SAOP,
 the Stacked Alternating Offers Protocol [@saop].
 
+Our task, creating an agent for the Automated Negotiating Agents
+Competition (ANAC) 2023, requires navigating 50 domains with additive
+linear issue spaces. Bids are placed in alternating order with one
+opponent. No communication besides bidding and acceptance of offers
+may take place---therefore, agents can only find out about their
+opponent's goals and strategy through progress in the negotiation.
+
 # Design
 
 Our agent's goal is optimization of its individual utility. To do this,
-iot must make competitive bids and concede minimally, finding the
+it must make competitive bids and concede minimally, finding the
 highest-utility bid that the opponent will also accept. A key part of
 this is identifying the opponent's strategy.
 
@@ -71,6 +81,17 @@ opponent model, and acceptance strategy as three high-level modules. BOA
 was chosen because it excels in flexibility, allowing us to create a
 more effective agent by combining innovations to each of its parts. This
 section will describe them in sequence.
+
+## Base implementation
+
+The agent was implemented in Python 3.9 and is fully compatible with the
+GeniusWeb capabilities in use for the Automated Negotiation League (ANL)
+2023. All contributions by the authors of this report are extensions of the
+`TemplateAgent` package in the ANL 2023 example agent repository[^1] by
+Bram Renting and collaborators. This section describes the structure of
+our implementation and corresponding methods in the source code.
+
+[^1]: <https://github.com/brenting/ANL-2023-example-agent>
 
 ## Baseline opponent model
 
@@ -95,7 +116,8 @@ implementation supports linear additive utility spaces only.
 As an extension of the provided estimator $\hat u_o$, we use DANS
 analysis to identify the opponent's behavior based on the bid history.
 DANS is a data-driven approach that uses the opponent's bid change
-between consecutive time steps to classify bidding behavior.
+between consecutive time steps to classify bidding behavior. We use a method
+adapted from @dans.
 
 The process assigns a category verdict to each bid based on the current
 and previous time step. In doing this, DANS considers only the
@@ -200,34 +222,52 @@ axis(2, at=seq(0, 1, 0.5))
 
 
 ```
+To find the next bid to offer, the agent searches 1000 random bids from the domain, and selects the best one based on two conditions: it has the highest score based on the **score_bid(alpha, eps)** function, 
+and our utility from this bid is higher than the threshold we set. If no bid satisfies the threshold, the agent falls back to proposing the best-scoring bid overall to ensure continued progress.
+The threshold is computed dynamically. First we compute a time-based threshold as below:
+$$ b = b_{\text{early}} + (b_{\text{late}} - b_{\text{early}}) \times \text{progress} $$
+$$ \text{baseline-threshold} = \\U_{\text{min}} + (U_{\text{max}} - U_{\text{min}}) \times (1.0 - \text{progress}^{(1.0 / b)}) $$
+
+where $b$ controls the concession speed over time and $U_{\text{max}}/U_{\text{min}}$ are the utility bounds.
+
+Then we adapt this time-based threshold by identifying the most recent DANS category of our opponent. We look at the most common DANS category from the last 5 bids. 
+This allows us to adapt to the opponent's current strategy rather than reacting to their overall behavior across the session. 
+Each DANS type has an associated offset, which we use to adjust our final threshold as follows: $$ \text{threshold} = \text{baseline-threshold} \times (1 + \text{offset})$$
+
+$\alpha$ and $\epsilon$ are parameters that control our selfishness and concession rate, and they are also chosen dynamically in response to our opponent's behavior and then linearly interpolated over time to allow more concession as the deadline approaches. We get the two most common DANS types in the last 5 bids, and again each DANS type has a predefined alpha and eps that we will use in response. We compute a weighted average of these values, and then adjust them based on time progress.
+
+All parameters in these functions were optimized later on using Bayesian Optimization.
 
 ## Acceptance strategy
 
-Description of the acceptance strategy goes here
+Empirical evidence presented by @Baarslag2014 demonstrates that among the basic acceptance strategies, $AC_\text{next}$ consistently outperforms alternatives such as $AC_\text{const}$ or $AC_\text{time}$, both in terms of agreement rates and the average utility achieved. This strategy accepts an opponent's offer if it exceeds the utility of the agent’s next planned bid, promoting responsive and adaptive negotiation behavior.
 
-# Implementation
+However, AC_{next} can fall short in scenarios where opponents begin to make significantly better offers toward the end of the negotiation. To address this, Baarslag et al. explore composite strategies that incorporate aggregate measures of offer quality over time. Among these, $AC_{combi}(T, \text{MAX}^{\mathcal{T}})$ — which accepts if the current offer is the best seen so far — stands out as a particularly aggressive yet promising option. It moves the basis for acceptance from immediate short-term comparison to a more historical, objective reference, effectively rewarding opponents who begin to concede later in the negotiation.
 
-The agent was implemented in Python 3.9 and is fully compatible with the
-GeniusWeb capabilities in use for the Automated Negotiating Agents
-Competition (ANAC) 2023 and Automated Negotiation League (ANL) 2023. All
-contributions by the authors of this report are extensions of the
-`TemplateAgent` package in the ANL 2023 example agent repository[^1] by
-Bram Renting and collaborators. This section describes the structure of
-our implementation and corresponding methods in the source code.
+Out of the aggregate-based approaches considered in the study — including $\text{MAX}^W$, $\text{AVG}^W$, and $\text{MAX}^{\mathcal{T}}$ — $\text{MAX}^{\mathcal{T}}$ focuses solely on the top historical utility. While this makes it a strong candidate for maximizing potential gain, the authors caution that such a strict threshold can result in fewer successful agreements. Offers that fail to meet the maximal utility requirement are rejected, increasing the risk of negotiations ending without a deal.
 
-[^1]: <https://github.com/brenting/ANL-2023-example-agent>
+To strike a balance between assertiveness and practicality, our agent implements a three-phase acceptance strategy that combines these insights.
 
-## Implementation of the DANS model
+Phase 1 (0%–90%): The agent uses $AC_{\text{next}}$, comparing the utility of the opponent’s current bid to its own next planned bid. If the opponent’s offer is better, the agent accepts. This maintains a competitive posture while allowing the agent to capitalize on unexpectedly favorable proposals.
 
-## Implementation of the bidding strategy
+Phase 2 (90%–98%): The acceptance condition shifts to $AC_{\text{combi}}(T, \text{MAX}^{\mathcal{T}})$. This allows the agent to recognize concessions from the opponent by checking whether the current bid is the best received so far. It reflects a shift in strategy toward the end of the negotiation — from outperforming our own plan to evaluating the opponent’s historical behavior.
+While @Baarslag2014 primarily apply the $AC_{\text{combi}}(T, \text{MAX}^{\mathcal{T}})$ condition in the final round of negotiation, our implementation adopts it earlier — from 90% of the timeline onward. This adjustment was made to allow the agent to recognize and accept optimal bids that may arrive just before the final round, reducing the risk of missing high-utility offers due to timing. Though this differs from the original setup, it preserves the theoretical motivation behind $\text{MAX}^{\mathcal{T}}$ — rewarding cooperation and capturing historical peak offers — while increasing responsiveness to late concessions from the opponent.
 
-## Implementation of the acceptance strategy
+
+Phase 3 (after 98%): As a fallback mechanism, the agent applies $AC_\text{const}$ with a threshold of $0.6$, accepting any offer with utility above this value. This prevents the negotiation from ending without agreement due to overly rigid acceptance criteria, while still maintaining a baseline level of fairness.
+
+This phased approach is informed by empirical findings and aims to maximize utility without compromising the likelihood of reaching an agreement — maintaining pressure when it’s advantageous but avoiding unnecessary failures
 
 # Optimization
 
-The implementation of our agent includes 'tuning' parameters. We
-leverage Bayesian optimization to find an optimum value for each
-parameter based on testing with a set of known agents.
+The implementation of our agent includes tuning parameters (the full list can be found in Appendix A). To find an optimum value for each one, we decided to use Bayesian Optimization. 
+Our objective was to maximize our average utility. We first ran 12 iterations using random uniform sampling to explore the parameter space and gather initial data for model fitting. 
+This allowed us to approximate the shape of the function that has to be maximized. After that, we ran 22 iterations that tried to find the maximum of our function. 
+In each iteration, we fit the GaussianProcessRegressor model on the previously obtained results, and we iteratively tried to find the best possible combinations of our parameters.
+Each iteration ran a negotiation session between our agent and 49 opponents that can be found in Appendix A. 
+To avoid overfitting on one domain, we randomly sampled 2 domains for each iteration, so in total we ran 98 negotiation sessions per iteration, and 3332 in total.
+The change in the average utility value of our agent across all iterations can be seen in the plot below.
+
 
 # Evaluation
 
@@ -243,16 +283,6 @@ indicator of our agent's performance and limitations.
 source("load_final_data.R");
 ```
 
-## Performance summary against other agents
-
-The graph below shows the average difference in utility against
-'CSE3210' agents in the repository.
-
-```{r plots1, out.width="100%"}
-hist((data$util_ours - data$util_opp)[which(substr(data$against, 1, 5) == "Agent")],
-     main="Performance against 'CSE3210' agents", xlab="Mean utility gain")
-```
-
 ```{r calc_perf}
 agent_perf <- data.frame(t(sapply(all_agents, function(a) {
     (data$util_ours - data$util_opp)[which(data$against == a)]
@@ -261,11 +291,47 @@ agent_perf <- sort_by.data.frame(agent_perf, apply(agent_perf, MARGIN=1, FUN = f
 agent_mean_perf <- apply(agent_perf, FUN = function(x) {median(na.omit(x))}, MARGIN = 1)
 ```
 
+## Performance summary against other agents
+
+The horizontal box plot below shows the marginal utility against all
+opponents over 5000 runs. Negotiations where the agents did not reach
+consensus are assumed to have utility 0 (the impact of this is noted in
+the evaluation section). Each line in the box plot represents one opponent,
+and if biased to the positive side indicates the relative strength of our
+agent.
+  Fairness of the evaluation was ensured through simulating both 'orientations'
+of each domain, so as to balance out its inherent bias. Any positive or
+negative bias is therefore representative of the strength of the agent.
+
+```{r}
+par(mar=c(4,4,4,4))
+boxplot(t(agent_perf[which(substr(rownames(agent_perf),1,5)=="Agent"),]), 
+        horizontal=TRUE, outline=FALSE,
+        main="Utility gain against all opponents",
+        ylab="Opponent",
+        yaxt='n',
+        xlab="Marginal utility")
+abline(v=0)
+```
+
+The following plot evaluates the agent against agents marked 'CSE3210' in the
+repository. The histogram shows the occurrence of runs with a certain marginal utility.
+The spread of this plot is given by the diverse range of agents and utility spaces.
+Crucially, however, the skewness indicates above-average performance in the negotiation
+tournament as the utility was systematically higher than that of opponents,
+which is desired behavior for a self-serving agent.
+
+```{r plots1}
+hist((data$util_ours - data$util_opp)[which(substr(data$against, 1, 5) == "Agent")],
+     main="Performance against 'CSE3210' agents", xlab="Mean utility gain")
+```
+
 The following two plots compare our agent's performance against the 10
-empirically toughest and easiest opponents. While it falls short of
-consistently outranking some of the most advanced implementations, the
-box plot demonstrates that our agent performs roughly within the 30th
-percentile of provided agents.
+empirically toughest and easiest opponents. This was determined by ranking them
+according to the median marginal utility: tough opponents have a higher utility
+than our agent in the average case, while easy ones. The agent falls short
+of consistently outranking some of the most advanced implementations, which is
+discussed in the limitations section.
 
 ```{r hardest-opp}
 par(mar=c(5,8,5,4))
@@ -273,29 +339,27 @@ barplot(agent_mean_perf[seq(10, 1, -1)], horiz = TRUE, las=1, xlim=c(-1, 0),
         main="Median utility gain against 10 toughest opponents")
 ```
 
+On the other hand, it is notable that our agent performs well with diverse classes of
+'simple' agent, in particular the _conceder_, _boulware_, and _linear_ agents.
+This indicates adaptability to several strategies. We consider this a successful
+application of strategy detection, as our implementation was able to use the
+DANS methodology to adapt to opponents.
+
 ```{r easiest-opp}
 par(mar=c(5,8,5,4))
 barplot(agent_mean_perf[seq(41, 50, 1)], horiz = TRUE, las=1, xlim=c(0, 1),
         main="Median utility gain against 10 easiest opponents")
 ```
 
-```{r}
-par(mar=c(4,4,4,4))
-boxplot(t(agent_perf[which(substr(rownames(agent_perf),1,5)=="Agent"),]), 
-        horizontal=TRUE, outline=FALSE,
-        main="Utility gain against all opponents")
-abline(v=0)
-```
-
-It is notable that our agent performs well with diverse classes of
-'simple' agent, in particular the conceder, boulware, and linear agents.
-This indicates adaptability to several strategies.
-
 ## Analysis of bidding behavior
 
 For a more in-depth analysis of the bidding behavior, we select a
 negotiation that occurred between our agent (marked *TemplateAgent*) and
-*LinearAgent*, which bids using a linear concession strategy.
+*LinearAgent*, which bids using a linear concession strategy. In this
+instance of the simulation, our agent beats out _LinearAgent_ with 0.93
+utility (ours) compared to 0.616 (theirs). This result was chosen for
+further analysis because its domain (_domain26_) has opposed goals (opposition: 0.339) and
+a relatively balanced distribution.
 
 ```{r}
 chosen <- which((data$domain == 'domain26') * (data$against == 'LinearAgent') * (data$reversed == FALSE) == 1)
@@ -304,7 +368,45 @@ chosen_json <- jsons[,chosen]
 domain <- plot_run_results(get_json_data(chosen_json))
 ```
 
-## Limitations
+The final plot above, showing the negotiation domain, shows our agent's 
+successful convergence to a consensus on the Pareto front.
+
+
+## Comparison to the baseline agent
+
+The following plot compares all runs against opponent agents for the baseline
+implementation (the ANAC 2023 _TemplateAgent_) and the agent described in this
+report (for _Group33Agent_). The sample size is all 50 opponents for _domain26_.
+
+```{r}
+template_summaries <- jsonlite::read_json("template_run/all_summaries/all_summaries.json")
+comp <- list(Template = sapply(seq(1, 50), function(x) {unlist(template_summaries[[x]][[3]])}),
+             Group33Agent = data$util_ours[which((data$domain == 'domain26') * (data$reversed == FALSE) == 1)])
+
+boxplot(comp, 
+        horizontal = TRUE,
+        main="Comparison to the baseline implementation",
+        ylim =c(0,1),
+        xlab = "Utility")
+```
+
+
+# Limitations
+
+## Limitations of the evaluation
+
+Our evaluation used over 5000 runs to generate evaluation data that
+compared our agent to other agents in the repository. We have identified
+the limitations of this procedure as well as questions left to address in
+future work.
+
+### Incomplete negotiations
+
+During the agent's training, we decided to manually set the acceptance
+utility threshold (reservation value) to $0.6$. In future, we would consider
+changing this to a dynamic value because it does not suit all domains.
+In particular, some negotiations rejected in no offer being accepted as
+our agent would refuse to concede (most notably to _HardlineAgent_).
 
 ### Learning agents
 
@@ -313,17 +415,49 @@ the evaluation does not consider advanced learning agents that could
 presumably gain an advantage over a number of 'training' runs against
 our implementation.
 
+
+## Limitations of the agent's implementation
+
+### Long-term strategy detection
+
+One explanation for why our agent did not perform well against the most advanced agents on offer, is due to the fact that we are only considering the last five bids in determining opponent behaviour for bidding purposes.
+While this works in our favor in fighting against mixed opponent strategies, this can prevent us from adapting to opponents who strategically alternate between long periods of tough and conceding tactics.
+
+### Support for other utility spaces
+
+Our agent currently supports only linear additive utility spaces,
+so non-linear or interdependent issues are not considered.
+
+
+### Utility space sample size
+
+In addition to the above, we are only sampling 1000 random bids,
+which may become problematic in large domains with many issues.
+This approach could fail to explore the offer space accurately.
+We suggest that this parameter be adjusted appropriately to the sample space size.
+
+### Acceptance Strategy
+
+Our acceptance strategy might accept bids too early. When there is only 10% of the time remanining, we accept any offer that is better than all previous ones.
+This might miss opponents that started off unwilling to negotiate, but end up conceding more towards the end, causing us to accept a non optimal offer. 
+
 # Conclusion
 
 In conclusion, we have shown that a DANS-based opponent model is a
-viable strategy for autonomous negotiation.
+viable strategy for autonomous negotiation. We proposed an agent based on
+the BOA architecture, incorporating DANS as well as novel strategies for
+the opponent model and bidding strategy. We performed Bayesian optimization
+and selected parameters for the competition.
+Our agent was evaluated against 50 ANAC 2023 agents over 50 domains
+and showed above-average performance in unseen domains, cementing the
+agent's architecture as a valid new approach to bilateral negotiation.
 
 # Ethical Statement {.unnumbered}
 
 While there are no ethical issues with the design and implementation of
 our autonomous agent, @agent-ethics writes that such issues may arise
 when self-serving negotiation agents such as ours are applied in
-sensitive contexts.
+sensitive contexts. 
 
 # Acknowledgments {.unnumbered}
 
@@ -337,3 +471,98 @@ Assistants.
 Group 33 distributed the work equally.
 
 # References {.unnumbered}
+
+<div id="refs"></div>
+
+# Appendix A: Optimization Parameters {.unnumbered}
+
+The following parameters were optimized using Bayesian Optimization:
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item \texttt{t}
+    \item \texttt{t\_prime}
+    \item \texttt{final\_utility}
+    \item \texttt{U\_max}
+    \item \texttt{U\_min}
+    \item \texttt{b\_early}
+    \item \texttt{b\_late}
+    \item \texttt{FORTUNATE\_offset}
+    \item \texttt{SELFISH\_offset}
+    \item \texttt{CONCESSION\_offset}
+    \item \texttt{UNFORTUNATE\_offset}
+    \item \texttt{NICE\_offset}
+    \item \texttt{SILENT\_offset}
+    \item \texttt{default\_alpha}
+    \item \texttt{default\_eps}
+    \item \texttt{FORTUNATE\_params\_alpha}
+    \item \texttt{SELFISH\_params\_alpha}
+    \item \texttt{CONCESSION\_params\_alpha}
+    \item \texttt{UNFORTUNATE\_params\_alpha}
+    \item \texttt{NICE\_params\_alpha}
+    \item \texttt{SILENT\_params\_alpha}
+    \item \texttt{FORTUNATE\_params\_eps}
+    \item \texttt{SELFISH\_params\_eps}
+    \item \texttt{CONCESSION\_params\_eps}
+    \item \texttt{UNFORTUNATE\_params\_eps}
+    \item \texttt{NICE\_params\_eps}
+    \item \texttt{SILENT\_params\_eps}
+\end{itemize}
+\end{multicols}
+
+The agent was evaluated against the following opponents:
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item BoulwareAgent
+    \item ConcederAgent
+    \item HardlinerAgent
+    \item LinearAgent
+    \item RandomAgent
+    \item StupidAgent
+    \item Agent2
+    \item Agent3
+    \item Agent7
+    \item Agent11
+    \item Agent14
+    \item Agent18
+    \item Agent19
+    \item Agent22
+    \item Agent24
+    \item Agent25
+    \item Agent26
+    \item Agent27
+    \item Agent29
+    \item Agent32
+    \item Agent33
+    \item Agent41
+    \item Agent43
+    \item Agent50
+    \item Agent52
+    \item Agent55
+    \item Agent58
+    \item Agent61
+    \item Agent64
+    \item Agent67
+    \item Agent68
+    \item Agent007
+    \item Agent4410
+    \item AgentFish
+    \item AgentFO2
+    \item BIU\_agent
+    \item ChargingBoul
+    \item CompromisingAgent
+    \item DreamTeam109Agent
+    \item GEAAgent
+    \item LearningAgent
+    \item LuckyAgent2022
+    \item MiCROAgent
+    \item Pinar\_Agent
+    \item ProcrastinAgent
+    \item RGAgent
+    \item SmartAgent
+    \item SuperAgent
+    \item ThirdAgent
+    \item Tjaronchery10Agent
+\end{itemize}
+\end{multicols}

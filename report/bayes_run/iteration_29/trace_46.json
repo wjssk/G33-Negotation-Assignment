@@ -1,0 +1,162 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5691",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueE": "valueB",
+            "issueC": "valueA",
+            "issueB": "valueB",
+            "issueA": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5691": 0.9154542877,
+          "agents_ANL2022_rg_agent_rg_agent_RGAgent_5692": 0.95545
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_ANL2022_rg_agent_rg_agent_RGAgent_5692",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueE": "valueB",
+            "issueC": "valueA",
+            "issueB": "valueB",
+            "issueA": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5691": 0.9154542877,
+          "agents_ANL2022_rg_agent_rg_agent_RGAgent_5692": 0.95545
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_5691",
+    "agents_ANL2022_rg_agent_rg_agent_RGAgent_5692"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743905024408
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.9,
+                    "t_prime": 0.999,
+                    "final_utility": 0.6653233510316803,
+                    "U_max": 1.0,
+                    "U_min": 0.7547079047017579,
+                    "b_early": 0.4014037575739632,
+                    "b_late": 2.368640754093355,
+                    "FORTUNATE_offset": 0.05,
+                    "SELFISH_offset": 0.1,
+                    "CONCESSION_offset": 0.1,
+                    "UNFORTUNATE_offset": 0.05,
+                    "NICE_offset": -0.02,
+                    "SILENT_offset": 0.05,
+                    "default_alpha": 1.0,
+                    "default_eps": 0.11365134457360145,
+                    "FORTUNATE_params_alpha": 0.9322021217048523,
+                    "SELFISH_params_alpha": 0.85,
+                    "CONCESSION_params_alpha": 0.9253545191436326,
+                    "UNFORTUNATE_params_alpha": 1.0,
+                    "NICE_params_alpha": 1.0,
+                    "SILENT_params_alpha": 1.0,
+                    "FORTUNATE_params_eps": 0.41846585546743037,
+                    "SELFISH_params_eps": 0.013672301019692768,
+                    "CONCESSION_params_eps": 0.5,
+                    "UNFORTUNATE_params_eps": 0.061372225403230965,
+                    "NICE_params_eps": 0.3720083600870421,
+                    "SILENT_params_eps": 0.1
+                  }
+                },
+                "profile": "file:domains/domain15/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.rg_agent.rg_agent.RGAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain15/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_5691": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.9,
+          "t_prime": 0.999,
+          "final_utility": 0.6653233510316803,
+          "U_max": 1.0,
+          "U_min": 0.7547079047017579,
+          "b_early": 0.4014037575739632,
+          "b_late": 2.368640754093355,
+          "FORTUNATE_offset": 0.05,
+          "SELFISH_offset": 0.1,
+          "CONCESSION_offset": 0.1,
+          "UNFORTUNATE_offset": 0.05,
+          "NICE_offset": -0.02,
+          "SILENT_offset": 0.05,
+          "default_alpha": 1.0,
+          "default_eps": 0.11365134457360145,
+          "FORTUNATE_params_alpha": 0.9322021217048523,
+          "SELFISH_params_alpha": 0.85,
+          "CONCESSION_params_alpha": 0.9253545191436326,
+          "UNFORTUNATE_params_alpha": 1.0,
+          "NICE_params_alpha": 1.0,
+          "SILENT_params_alpha": 1.0,
+          "FORTUNATE_params_eps": 0.41846585546743037,
+          "SELFISH_params_eps": 0.013672301019692768,
+          "CONCESSION_params_eps": 0.5,
+          "UNFORTUNATE_params_eps": 0.061372225403230965,
+          "NICE_params_eps": 0.3720083600870421,
+          "SILENT_params_eps": 0.1
+        }
+      },
+      "profile": "file:domains/domain15/profileA.json"
+    },
+    "agents_ANL2022_rg_agent_rg_agent_RGAgent_5692": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.rg_agent.rg_agent.RGAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain15/profileB.json"
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,563 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.95002,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.5018644405
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueB",
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.358830471,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 1.0
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9683446015,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.194994614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueG",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.60689195,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9816121036
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueB",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.99907,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.4443062283
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueB",
+            "issueC": "valueM",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.7390950455,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.7176409999
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9762063355,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.026764614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueD",
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.322563402,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9960074551
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9762063355,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.026764614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueF",
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueF": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.31610195,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.974514614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9157940896,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.482895798
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueD",
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.322563402,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9960074551
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9331886911,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.5652359715
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueA",
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.360800575,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9919997824
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.95002,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.5018644405
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.88359195,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.988824614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueB",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.99907,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.4443062283
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueM",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.761102394,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9944496343
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9683446015,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.194994614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueI",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.724276391,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.98155
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueA",
+            "issueC": "valueF",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.9674146015,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.584204614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueM",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.761102394,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9944496343
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5879",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueE": "valueC",
+            "issueC": "valueM",
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueF": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5879": 0.761102394,
+          "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": 0.9944496343
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_5879",
+    "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743905618141
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.8671646896567148,
+                    "t_prime": 0.999,
+                    "final_utility": 0.8079874559149264,
+                    "U_max": 1.0,
+                    "U_min": 0.85,
+                    "b_early": 0.37405933072981495,
+                    "b_late": 2.434816311415754,
+                    "FORTUNATE_offset": 0.05,
+                    "SELFISH_offset": 0.01,
+                    "CONCESSION_offset": 0.01,
+                    "UNFORTUNATE_offset": -0.008942956583260867,
+                    "NICE_offset": -0.014855081441754344,
+                    "SILENT_offset": -0.02,
+                    "default_alpha": 0.9745899055100843,
+                    "default_eps": 0.20394337922872086,
+                    "FORTUNATE_params_alpha": 0.8,
+                    "SELFISH_params_alpha": 0.85,
+                    "CONCESSION_params_alpha": 0.8314332952928752,
+                    "UNFORTUNATE_params_alpha": 0.85,
+                    "NICE_params_alpha": 0.9955064219638275,
+                    "SILENT_params_alpha": 0.9338386726204144,
+                    "FORTUNATE_params_eps": 0.26735066901371307,
+                    "SELFISH_params_eps": 0.2,
+                    "CONCESSION_params_eps": 0.49768706615336256,
+                    "UNFORTUNATE_params_eps": 0.01,
+                    "NICE_params_eps": 0.1,
+                    "SILENT_params_eps": 0.24562613288696428
+                  }
+                },
+                "profile": "file:domains/domain45/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.gea_agent.gea_agent.GEAAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain45/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_5879": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.8671646896567148,
+          "t_prime": 0.999,
+          "final_utility": 0.8079874559149264,
+          "U_max": 1.0,
+          "U_min": 0.85,
+          "b_early": 0.37405933072981495,
+          "b_late": 2.434816311415754,
+          "FORTUNATE_offset": 0.05,
+          "SELFISH_offset": 0.01,
+          "CONCESSION_offset": 0.01,
+          "UNFORTUNATE_offset": -0.008942956583260867,
+          "NICE_offset": -0.014855081441754344,
+          "SILENT_offset": -0.02,
+          "default_alpha": 0.9745899055100843,
+          "default_eps": 0.20394337922872086,
+          "FORTUNATE_params_alpha": 0.8,
+          "SELFISH_params_alpha": 0.85,
+          "CONCESSION_params_alpha": 0.8314332952928752,
+          "UNFORTUNATE_params_alpha": 0.85,
+          "NICE_params_alpha": 0.9955064219638275,
+          "SILENT_params_alpha": 0.9338386726204144,
+          "FORTUNATE_params_eps": 0.26735066901371307,
+          "SELFISH_params_eps": 0.2,
+          "CONCESSION_params_eps": 0.49768706615336256,
+          "UNFORTUNATE_params_eps": 0.01,
+          "NICE_params_eps": 0.1,
+          "SILENT_params_eps": 0.24562613288696428
+        }
+      },
+      "profile": "file:domains/domain45/profileA.json"
+    },
+    "agents_ANL2022_gea_agent_gea_agent_GEAAgent_5880": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.gea_agent.gea_agent.GEAAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain45/profileB.json"
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,279 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5267",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueA": "valueO",
+            "issueB": "valueC",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.8570283356,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.6929326164
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_agentfish_agentfish_AgentFish_5268",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueA": "valueG",
+            "issueB": "valueB",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.4185537207,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7020496373
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5267",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueA": "valueE",
+            "issueB": "valueO",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.9671685,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7317650097
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_agentfish_agentfish_AgentFish_5268",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueA": "valueR",
+            "issueB": "valueK",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.4513499988,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7316213317
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5267",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueA": "valueE",
+            "issueB": "valueG",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.9607633269,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7200437995
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_agentfish_agentfish_AgentFish_5268",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueA": "valueK",
+            "issueB": "valueK",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.3941422692,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7309355871
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5267",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueA": "valueR",
+            "issueB": "valueE",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.8026893273,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.4643691702
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_agentfish_agentfish_AgentFish_5268",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueA": "valueE",
+            "issueB": "valueO",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.9671685,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7317650097
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_5267",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueA": "valueE",
+            "issueB": "valueO",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_5267": 0.9671685,
+          "agents_ANL2022_agentfish_agentfish_AgentFish_5268": 0.7317650097
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_5267",
+    "agents_ANL2022_agentfish_agentfish_AgentFish_5268"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743903429036
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.9,
+                    "t_prime": 0.98,
+                    "final_utility": 0.6,
+                    "U_max": 0.9,
+                    "U_min": 0.85,
+                    "b_early": 1.0,
+                    "b_late": 3.0,
+                    "FORTUNATE_offset": 0.05,
+                    "SELFISH_offset": 0.01,
+                    "CONCESSION_offset": 0.01,
+                    "UNFORTUNATE_offset": 0.05,
+                    "NICE_offset": 0.05,
+                    "SILENT_offset": -0.02,
+                    "default_alpha": 1.0,
+                    "default_eps": 0.5,
+                    "FORTUNATE_params_alpha": 0.8,
+                    "SELFISH_params_alpha": 0.85,
+                    "CONCESSION_params_alpha": 1.0,
+                    "UNFORTUNATE_params_alpha": 1.0,
+                    "NICE_params_alpha": 0.8,
+                    "SILENT_params_alpha": 1.0,
+                    "FORTUNATE_params_eps": 0.42638821209283256,
+                    "SELFISH_params_eps": 0.01,
+                    "CONCESSION_params_eps": 0.1,
+                    "UNFORTUNATE_params_eps": 0.3,
+                    "NICE_params_eps": 0.1,
+                    "SILENT_params_eps": 0.1
+                  }
+                },
+                "profile": "file:domains/domain33/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.agentfish.agentfish.AgentFish",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain33/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_5267": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.9,
+          "t_prime": 0.98,
+          "final_utility": 0.6,
+          "U_max": 0.9,
+          "U_min": 0.85,
+          "b_early": 1.0,
+          "b_late": 3.0,
+          "FORTUNATE_offset": 0.05,
+          "SELFISH_offset": 0.01,
+          "CONCESSION_offset": 0.01,
+          "UNFORTUNATE_offset": 0.05,
+          "NICE_offset": 0.05,
+          "SILENT_offset": -0.02,
+          "default_alpha": 1.0,
+          "default_eps": 0.5,
+          "FORTUNATE_params_alpha": 0.8,
+          "SELFISH_params_alpha": 0.85,
+          "CONCESSION_params_alpha": 1.0,
+          "UNFORTUNATE_params_alpha": 1.0,
+          "NICE_params_alpha": 0.8,
+          "SILENT_params_alpha": 1.0,
+          "FORTUNATE_params_eps": 0.42638821209283256,
+          "SELFISH_params_eps": 0.01,
+          "CONCESSION_params_eps": 0.1,
+          "UNFORTUNATE_params_eps": 0.3,
+          "NICE_params_eps": 0.1,
+          "SILENT_params_eps": 0.1
+        }
+      },
+      "profile": "file:domains/domain33/profileA.json"
+    },
+    "agents_ANL2022_agentfish_agentfish_AgentFish_5268": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.agentfish.agentfish.AgentFish",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain33/profileB.json"
+    }
+  },
+  "error": null
+}

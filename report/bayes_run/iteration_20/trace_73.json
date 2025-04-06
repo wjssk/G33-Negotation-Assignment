@@ -1,0 +1,160 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_3945",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueO",
+            "issueA": "valueB",
+            "issueB": "valueR",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_3945": 0.9716315614,
+          "agents_CSE3210_agent43_agent43_Agent43_3946": 0.5294354518
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_CSE3210_agent43_agent43_Agent43_3946",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueO",
+            "issueA": "valueB",
+            "issueB": "valueR",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_3945": 0.9716315614,
+          "agents_CSE3210_agent43_agent43_Agent43_3946": 0.5294354518
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_3945",
+    "agents_CSE3210_agent43_agent43_Agent43_3946"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743898278197
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.85,
+                    "t_prime": 0.999,
+                    "final_utility": 0.9,
+                    "U_max": 0.9,
+                    "U_min": 0.85,
+                    "b_early": 0.6241746239289614,
+                    "b_late": 3.0,
+                    "FORTUNATE_offset": -0.02,
+                    "SELFISH_offset": 0.01,
+                    "CONCESSION_offset": 0.01,
+                    "UNFORTUNATE_offset": -0.05,
+                    "NICE_offset": 0.05,
+                    "SILENT_offset": -0.02,
+                    "default_alpha": 0.85,
+                    "default_eps": 0.5,
+                    "FORTUNATE_params_alpha": 1.0,
+                    "SELFISH_params_alpha": 0.85,
+                    "CONCESSION_params_alpha": 0.8,
+                    "UNFORTUNATE_params_alpha": 1.0,
+                    "NICE_params_alpha": 1.0,
+                    "SILENT_params_alpha": 1.0,
+                    "FORTUNATE_params_eps": 0.1,
+                    "SELFISH_params_eps": 0.08086950658877534,
+                    "CONCESSION_params_eps": 0.5,
+                    "UNFORTUNATE_params_eps": 0.3,
+                    "NICE_params_eps": 0.1,
+                    "SILENT_params_eps": 0.4
+                  }
+                },
+                "profile": "file:domains/domain36/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.CSE3210.agent43.agent43.Agent43",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain36/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_3945": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.85,
+          "t_prime": 0.999,
+          "final_utility": 0.9,
+          "U_max": 0.9,
+          "U_min": 0.85,
+          "b_early": 0.6241746239289614,
+          "b_late": 3.0,
+          "FORTUNATE_offset": -0.02,
+          "SELFISH_offset": 0.01,
+          "CONCESSION_offset": 0.01,
+          "UNFORTUNATE_offset": -0.05,
+          "NICE_offset": 0.05,
+          "SILENT_offset": -0.02,
+          "default_alpha": 0.85,
+          "default_eps": 0.5,
+          "FORTUNATE_params_alpha": 1.0,
+          "SELFISH_params_alpha": 0.85,
+          "CONCESSION_params_alpha": 0.8,
+          "UNFORTUNATE_params_alpha": 1.0,
+          "NICE_params_alpha": 1.0,
+          "SILENT_params_alpha": 1.0,
+          "FORTUNATE_params_eps": 0.1,
+          "SELFISH_params_eps": 0.08086950658877534,
+          "CONCESSION_params_eps": 0.5,
+          "UNFORTUNATE_params_eps": 0.3,
+          "NICE_params_eps": 0.1,
+          "SILENT_params_eps": 0.4
+        }
+      },
+      "profile": "file:domains/domain36/profileA.json"
+    },
+    "agents_CSE3210_agent43_agent43_Agent43_3946": {
+      "party": {
+        "partyref": "pythonpath:agents.CSE3210.agent43.agent43.Agent43",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain36/profileB.json"
+    }
+  },
+  "error": null
+}

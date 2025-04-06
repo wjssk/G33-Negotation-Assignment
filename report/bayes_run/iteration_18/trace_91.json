@@ -1,0 +1,198 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_3581",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueE": "valueA",
+            "issueC": "valueA",
+            "issueB": "valueD",
+            "issueA": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_3581": 0.9416517391,
+          "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582": 0.5503577394
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueE": "valueB",
+            "issueC": "valueA",
+            "issueB": "valueD",
+            "issueA": "valueN"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_3581": 0.5958983581,
+          "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582": 0.9677001594
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_3581",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueE": "valueB",
+            "issueC": "valueA",
+            "issueB": "valueD",
+            "issueA": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_3581": 0.9524617391,
+          "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582": 0.9712577394
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueE": "valueB",
+            "issueC": "valueA",
+            "issueB": "valueD",
+            "issueA": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_3581": 0.9524617391,
+          "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582": 0.9712577394
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_3581",
+    "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743897109132
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.9,
+                    "t_prime": 0.98,
+                    "final_utility": 0.6,
+                    "U_max": 0.9,
+                    "U_min": 0.6,
+                    "b_early": 0.7397568075437101,
+                    "b_late": 2.3233908382273123,
+                    "FORTUNATE_offset": 0.05,
+                    "SELFISH_offset": 0.1,
+                    "CONCESSION_offset": 0.1,
+                    "UNFORTUNATE_offset": -0.05,
+                    "NICE_offset": 0.05,
+                    "SILENT_offset": -0.02,
+                    "default_alpha": 1.0,
+                    "default_eps": 0.5,
+                    "FORTUNATE_params_alpha": 0.8,
+                    "SELFISH_params_alpha": 1.0,
+                    "CONCESSION_params_alpha": 0.8,
+                    "UNFORTUNATE_params_alpha": 0.85,
+                    "NICE_params_alpha": 1.0,
+                    "SILENT_params_alpha": 0.8,
+                    "FORTUNATE_params_eps": 0.1,
+                    "SELFISH_params_eps": 0.2,
+                    "CONCESSION_params_eps": 0.1,
+                    "UNFORTUNATE_params_eps": 0.01,
+                    "NICE_params_eps": 0.4,
+                    "SILENT_params_eps": 0.1
+                  }
+                },
+                "profile": "file:domains/domain10/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.learning_agent.learning_agent.LearningAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain10/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_3581": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.9,
+          "t_prime": 0.98,
+          "final_utility": 0.6,
+          "U_max": 0.9,
+          "U_min": 0.6,
+          "b_early": 0.7397568075437101,
+          "b_late": 2.3233908382273123,
+          "FORTUNATE_offset": 0.05,
+          "SELFISH_offset": 0.1,
+          "CONCESSION_offset": 0.1,
+          "UNFORTUNATE_offset": -0.05,
+          "NICE_offset": 0.05,
+          "SILENT_offset": -0.02,
+          "default_alpha": 1.0,
+          "default_eps": 0.5,
+          "FORTUNATE_params_alpha": 0.8,
+          "SELFISH_params_alpha": 1.0,
+          "CONCESSION_params_alpha": 0.8,
+          "UNFORTUNATE_params_alpha": 0.85,
+          "NICE_params_alpha": 1.0,
+          "SILENT_params_alpha": 0.8,
+          "FORTUNATE_params_eps": 0.1,
+          "SELFISH_params_eps": 0.2,
+          "CONCESSION_params_eps": 0.1,
+          "UNFORTUNATE_params_eps": 0.01,
+          "NICE_params_eps": 0.4,
+          "SILENT_params_eps": 0.1
+        }
+      },
+      "profile": "file:domains/domain10/profileA.json"
+    },
+    "agents_ANL2022_learning_agent_learning_agent_LearningAgent_3582": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.learning_agent.learning_agent.LearningAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain10/profileB.json"
+    }
+  },
+  "error": null
+}

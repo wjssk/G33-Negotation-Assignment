@@ -57,7 +57,10 @@ data$against <- as.factor(sapply(ns, function(x) {
                    function(x) {x[["party"]][["partyref"]]})[2])
 }))
 
-data$reversed <- as.factor(sapply(data, function(x) {x[2]}))
+# utility space reversed?
+data$reversed <- as.factor(sapply(data$file_path, function(x) {
+  length(strsplit(x, "profileB_profileA")[[1]]) == 2
+}))
 
 # 'failed?' column
 data$failed <- sapply(ns, function(x) {is.null(jsons[,x]$actions$Accept)})
@@ -82,10 +85,21 @@ all_agents <- sort(unique(data$against))
 ```
 
 ```{r}
+nfailed <- sapply(all_agents, function(a) {sum(data$failed[data$against == a])})
 
-barplot(sapply(domains, function(d) {sum(data$failed[which(data$domain == d)])}),
-        main = "Number of failed runs per domain")
-barplot(sapply(all_agents, function(a) {sum(data$failed[data$against == a])}),
+faileds <- which(data$failed)
+for (failed in faileds) {
+  opp <- data$against[failed]
+  dom <- data$domain[failed]
+  mark <- which((data$against == opp) * (data$domain == dom) == 1)
+  data$failed[mark] <- TRUE
+  data$util_opp[mark] <- NA
+  data$util_ours[mark] <- NA
+}
+
+asorted <- sort_by(all_agents, nfailed)
+
+barplot(sort(nfailed)[seq(41, 50)],
         main = "Number of failed runs per agent")
 ```
 

@@ -1,0 +1,194 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_6071",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueN",
+            "issueA": "valueD",
+            "issueB": "valueR",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_6071": 0.9236824048,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072": 0.4450287051
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueA": "valueB",
+            "issueB": "valueG",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_6071": 0.2910690981,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072": 0.98924734
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_6071",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueA": "valueB",
+            "issueB": "valueR",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_6071": 0.9397148734,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072": 0.8240191159
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueE",
+            "issueA": "valueB",
+            "issueB": "valueR",
+            "issueC": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_6071": 0.9397148734,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072": 0.8240191159
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_6071",
+    "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743906012379
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.9,
+                    "t_prime": 0.999,
+                    "final_utility": 0.6,
+                    "U_max": 0.9,
+                    "U_min": 0.85,
+                    "b_early": 1.0,
+                    "b_late": 1.0,
+                    "FORTUNATE_offset": 0.05,
+                    "SELFISH_offset": 0.1,
+                    "CONCESSION_offset": 0.1,
+                    "UNFORTUNATE_offset": -0.05,
+                    "NICE_offset": -0.02,
+                    "SILENT_offset": 0.05,
+                    "default_alpha": 0.85,
+                    "default_eps": 0.01,
+                    "FORTUNATE_params_alpha": 0.8,
+                    "SELFISH_params_alpha": 0.85,
+                    "CONCESSION_params_alpha": 1.0,
+                    "UNFORTUNATE_params_alpha": 0.85,
+                    "NICE_params_alpha": 0.8,
+                    "SILENT_params_alpha": 1.0,
+                    "FORTUNATE_params_eps": 0.1,
+                    "SELFISH_params_eps": 0.01,
+                    "CONCESSION_params_eps": 0.1,
+                    "UNFORTUNATE_params_eps": 0.3,
+                    "NICE_params_eps": 0.1,
+                    "SILENT_params_eps": 0.1
+                  }
+                },
+                "profile": "file:domains/domain36/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.BIU_agent.BIU_agent.BIU_agent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain36/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_6071": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.9,
+          "t_prime": 0.999,
+          "final_utility": 0.6,
+          "U_max": 0.9,
+          "U_min": 0.85,
+          "b_early": 1.0,
+          "b_late": 1.0,
+          "FORTUNATE_offset": 0.05,
+          "SELFISH_offset": 0.1,
+          "CONCESSION_offset": 0.1,
+          "UNFORTUNATE_offset": -0.05,
+          "NICE_offset": -0.02,
+          "SILENT_offset": 0.05,
+          "default_alpha": 0.85,
+          "default_eps": 0.01,
+          "FORTUNATE_params_alpha": 0.8,
+          "SELFISH_params_alpha": 0.85,
+          "CONCESSION_params_alpha": 1.0,
+          "UNFORTUNATE_params_alpha": 0.85,
+          "NICE_params_alpha": 0.8,
+          "SILENT_params_alpha": 1.0,
+          "FORTUNATE_params_eps": 0.1,
+          "SELFISH_params_eps": 0.01,
+          "CONCESSION_params_eps": 0.1,
+          "UNFORTUNATE_params_eps": 0.3,
+          "NICE_params_eps": 0.1,
+          "SILENT_params_eps": 0.1
+        }
+      },
+      "profile": "file:domains/domain36/profileA.json"
+    },
+    "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_6072": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.BIU_agent.BIU_agent.BIU_agent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain36/profileB.json"
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,293 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_4017",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueF",
+            "issueE": "valueA",
+            "issueC": "valueB",
+            "issueB": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9972180928,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.27781
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_CSE3210_agent7_agent7_Agent7_4018",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueJ",
+            "issueA": "valueV",
+            "issueB": "valueH",
+            "issueC": "valueA",
+            "issueE": "valueA",
+            "issueF": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.0436880194,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.0122596162
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_4017",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueE": "valueB",
+            "issueC": "valueB",
+            "issueB": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9847246848,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.4102896209
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_CSE3210_agent7_agent7_Agent7_4018",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueA",
+            "issueA": "valueA",
+            "issueB": "valueB",
+            "issueC": "valueD",
+            "issueE": "valueF",
+            "issueF": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9503246848,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.0076696209
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_4017",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueI",
+            "issueE": "valueB",
+            "issueC": "valueB",
+            "issueB": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9843646848,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.4033191128
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_CSE3210_agent7_agent7_Agent7_4018",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueB",
+            "issueA": "valueA",
+            "issueB": "valueB",
+            "issueC": "valueD",
+            "issueE": "valueF",
+            "issueF": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9500038816,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.0465391143
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_4017",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueJ",
+            "issueE": "valueB",
+            "issueC": "valueB",
+            "issueB": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.98718,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.4070660432
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_CSE3210_agent7_agent7_Agent7_4018",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueA": "valueA",
+            "issueB": "valueB",
+            "issueC": "valueD",
+            "issueE": "valueF",
+            "issueF": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9519504736,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.0128275416
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_4017",
+        "bid": {
+          "issuevalues": {
+            "issueD": "valueC",
+            "issueA": "valueA",
+            "issueB": "valueB",
+            "issueC": "valueD",
+            "issueE": "valueF",
+            "issueF": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_4017": 0.9519504736,
+          "agents_CSE3210_agent7_agent7_Agent7_4018": 0.0128275416
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_4017",
+    "agents_CSE3210_agent7_agent7_Agent7_4018"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743898523956
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent",
+                    "t": 0.9,
+                    "t_prime": 0.999,
+                    "final_utility": 0.9,
+                    "U_max": 1.0,
+                    "U_min": 0.85,
+                    "b_early": 1.0,
+                    "b_late": 1.640084287444702,
+                    "FORTUNATE_offset": -0.02,
+                    "SELFISH_offset": 0.01,
+                    "CONCESSION_offset": 0.01,
+                    "UNFORTUNATE_offset": -0.05,
+                    "NICE_offset": 0.05,
+                    "SILENT_offset": 0.05,
+                    "default_alpha": 1.0,
+                    "default_eps": 0.1433120318871378,
+                    "FORTUNATE_params_alpha": 1.0,
+                    "SELFISH_params_alpha": 1.0,
+                    "CONCESSION_params_alpha": 1.0,
+                    "UNFORTUNATE_params_alpha": 1.0,
+                    "NICE_params_alpha": 1.0,
+                    "SILENT_params_alpha": 1.0,
+                    "FORTUNATE_params_eps": 0.5,
+                    "SELFISH_params_eps": 0.01,
+                    "CONCESSION_params_eps": 0.1,
+                    "UNFORTUNATE_params_eps": 0.01,
+                    "NICE_params_eps": 0.4,
+                    "SILENT_params_eps": 0.4
+                  }
+                },
+                "profile": "file:domains/domain49/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.CSE3210.agent7.agent7.Agent7",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain49/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_4017": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent",
+          "t": 0.9,
+          "t_prime": 0.999,
+          "final_utility": 0.9,
+          "U_max": 1.0,
+          "U_min": 0.85,
+          "b_early": 1.0,
+          "b_late": 1.640084287444702,
+          "FORTUNATE_offset": -0.02,
+          "SELFISH_offset": 0.01,
+          "CONCESSION_offset": 0.01,
+          "UNFORTUNATE_offset": -0.05,
+          "NICE_offset": 0.05,
+          "SILENT_offset": 0.05,
+          "default_alpha": 1.0,
+          "default_eps": 0.1433120318871378,
+          "FORTUNATE_params_alpha": 1.0,
+          "SELFISH_params_alpha": 1.0,
+          "CONCESSION_params_alpha": 1.0,
+          "UNFORTUNATE_params_alpha": 1.0,
+          "NICE_params_alpha": 1.0,
+          "SILENT_params_alpha": 1.0,
+          "FORTUNATE_params_eps": 0.5,
+          "SELFISH_params_eps": 0.01,
+          "CONCESSION_params_eps": 0.1,
+          "UNFORTUNATE_params_eps": 0.01,
+          "NICE_params_eps": 0.4,
+          "SILENT_params_eps": 0.4
+        }
+      },
+      "profile": "file:domains/domain49/profileA.json"
+    },
+    "agents_CSE3210_agent7_agent7_Agent7_4018": {
+      "party": {
+        "partyref": "pythonpath:agents.CSE3210.agent7.agent7.Agent7",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain49/profileB.json"
+    }
+  },
+  "error": null
+}
