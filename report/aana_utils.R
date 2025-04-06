@@ -4,15 +4,15 @@ library(grid)
 library(gridExtra)
 library(scales)
 
-read_results <- function (repo_path, results_name) {
+read_results <- function (repo_path, results_nam) {
+  cat(file=stderr(), sprintf("\nReading the results for %s\n", results))
+  json_path <- paste(results_dir, results, '/session_results_trace.json', sep='')
+  read_results_at_path(json_path)
+}
+
+read_results_at_path <- function (json_path) {
   
-  read_results_json <- function (results_dir, results) {
-    cat(file=stderr(), sprintf("\nReading the results for %s\n", results))
-    json_path <- paste(results_dir, results, '/session_results_trace.json', sep='')
-    jsonlite::fromJSON(json_path)
-  }
-  
-  json <- read_results_json(repo_path, results_name)
+  json <- jsonlite::fromJSON(json_path)
   
   agents <- sapply(json$settings$SAOPSettings$participants$TeamInfo$parties, 
                    function(x) {x[["party"]][["partyref"]]})
@@ -139,8 +139,6 @@ plot_run_results <- function (result_data) {
   received2 <- data$Utility2
   received2[(data$OfferedBy == "Agent2")] <- NA
   
-  #layout(matrix(c(1,4,2,3), 2, 2, byrow = TRUE))
-  
   plot(offered1, pch=18, cex=0.6, col=alpha(colors[1], 0.5),
        ylim=c(0, 1), xlab="Bid number", ylab="Bid utility", main="Bids exchanged between agents")
   points(offered2, pch=18, cex=0.6, col=alpha(colors[2], 0.5))
@@ -195,8 +193,8 @@ plot_run_results <- function (result_data) {
   points(paretos(all_utils), type='l', col='gray70', lwd=1.5)
   points(paretos(all_utils), pch=18, cex=0.5, col='black')
   
-  points(paretos(cbind(offered1, received2)), type='s', col=colors[1], lwd=1.5)
-  points(paretos(cbind(received1, offered2)), type='s', col=colors[2], lwd=1.5)
+  #points(paretos(cbind(offered1, received2)), type='s', col=colors[1], lwd=1.5)
+  #points(paretos(cbind(received1, offered2)), type='s', col=colors[2], lwd=1.5)
   
   points(offered1, received2, pch=18, cex=0.7, col=colors[3])
   points(received1, offered2, pch=18, cex=0.7, col=colors[4])
@@ -217,12 +215,12 @@ plot_run_results <- function (result_data) {
          col=c(colors, "gray70")[c(NA, 3, 4, 5, NA, 1, 2, 5)],
          lwd=3, cex=0.7)
   
-  concessions1 <- cummin_na(offered1)[c(-consensus, -consensus+1)] - cummin_na(offered1)[c(-1, -2)]
-  concessions2 <- cummin_na(offered2)[c(-consensus, -consensus+1)] - cummin_na(offered2)[c(-1, -2)]
-  plot(filter(concessions1, rep(1/1000, 1000)), col=colors[1],
-       main="Concession rate", xlab=sprintf("Bid number"),
-       ylab=sprintf("Average decrease in offered utility per round"))
-  points(filter(concessions2, rep(1/1000, 1000)), type='l', pch=16, col=colors[2])
-  
+#  concessions1 <- cummin_na(offered1)[c(-consensus, -consensus+1)] - cummin_na(offered1)[c(-1, -2)]
+#  concessions2 <- cummin_na(offered2)[c(-consensus, -consensus+1)] - cummin_na(offered2)[c(-1, -2)]
+#  plot(filter(concessions1, rep(1/1000, 1000)), col=colors[1],
+#       main="Concession rate", xlab=sprintf("Bid number"),
+#       ylab=sprintf("Average decrease in offered utility per round"))
+#  points(filter(concessions2, rep(1/1000, 1000)), type='l', pch=16, col=colors[2])
+#  
   cat(file=stderr(), "\nAll graphs plotted for these results")
 }

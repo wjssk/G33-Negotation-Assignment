@@ -1,0 +1,140 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_411",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueP",
+            "issueA": "valueA",
+            "issueC": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_411": 0.9434066457,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412": 0.7970012792
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueD": "valueG",
+            "issueA": "valueA",
+            "issueC": "valueU"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_411": 0.4077073271,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412": 0.99112
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_411",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueP",
+            "issueA": "valueA",
+            "issueC": "valueW"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_411": 0.9629629593,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412": 0.8151613448
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueP",
+            "issueA": "valueA",
+            "issueC": "valueW"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_411": 0.9629629593,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412": 0.8151613448
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_411",
+    "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743945394677
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_85d13a32-fb30-4e28-835e-e80b1866e7b6"
+                  }
+                },
+                "profile": "file:domains/domain18/profileB.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.BIU_agent.BIU_agent.BIU_agent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain18/profileA.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_411": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_85d13a32-fb30-4e28-835e-e80b1866e7b6"
+        }
+      },
+      "profile": "file:domains/domain18/profileB.json"
+    },
+    "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_412": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.BIU_agent.BIU_agent.BIU_agent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain18/profileA.json"
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,144 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_325",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueB",
+            "issueE": "valueB",
+            "issueD": "valueA",
+            "issueA": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_325": 1.0,
+          "agents_CSE3210_agent61_agent61_Agent61_326": 0.7622315941
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_CSE3210_agent61_agent61_Agent61_326",
+        "bid": {
+          "issuevalues": {
+            "issueA": "valueC",
+            "issueB": "valueB",
+            "issueC": "valueA",
+            "issueD": "valueA",
+            "issueE": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_325": 0.6221242877,
+          "agents_CSE3210_agent61_agent61_Agent61_326": 1.0
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_325",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueB",
+            "issueE": "valueB",
+            "issueD": "valueA",
+            "issueA": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_325": 0.9154542877,
+          "agents_CSE3210_agent61_agent61_Agent61_326": 0.95545
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_CSE3210_agent61_agent61_Agent61_326",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueB",
+            "issueE": "valueB",
+            "issueD": "valueA",
+            "issueA": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_325": 0.9154542877,
+          "agents_CSE3210_agent61_agent61_Agent61_326": 0.95545
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_325",
+    "agents_CSE3210_agent61_agent61_Agent61_326"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743945038439
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_9e45483d-4e03-43ef-a2d6-82b35cb5822c"
+                  }
+                },
+                "profile": "file:domains/domain15/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.CSE3210.agent61.agent61.Agent61",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain15/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_325": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_9e45483d-4e03-43ef-a2d6-82b35cb5822c"
+        }
+      },
+      "profile": "file:domains/domain15/profileA.json"
+    },
+    "agents_CSE3210_agent61_agent61_Agent61_326": {
+      "party": {
+        "partyref": "pythonpath:agents.CSE3210.agent61.agent61.Agent61",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain15/profileB.json"
+    }
+  },
+  "error": null
+}

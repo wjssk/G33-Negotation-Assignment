@@ -1,0 +1,144 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_451",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueI",
+            "issueB": "valueC",
+            "issueE": "valueC",
+            "issueD": "valueA",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_451": 0.9694600648,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452": 0.7354728292
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueJ",
+            "issueB": "valueG",
+            "issueE": "valueE",
+            "issueD": "valueA",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_451": 0.5887447752,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452": 0.9810982552
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_451",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueJ",
+            "issueB": "valueE",
+            "issueE": "valueC",
+            "issueD": "valueA",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_451": 0.9822281094,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452": 0.914709812
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueJ",
+            "issueB": "valueE",
+            "issueE": "valueC",
+            "issueD": "valueA",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_451": 0.9822281094,
+          "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452": 0.914709812
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_451",
+    "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743945287259
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_8516d302-5b1d-4fdd-95a9-86fe7c101e15"
+                  }
+                },
+                "profile": "file:domains/domain25/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.BIU_agent.BIU_agent.BIU_agent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain25/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_451": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_8516d302-5b1d-4fdd-95a9-86fe7c101e15"
+        }
+      },
+      "profile": "file:domains/domain25/profileA.json"
+    },
+    "agents_ANL2022_BIU_agent_BIU_agent_BIU_agent_452": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.BIU_agent.BIU_agent.BIU_agent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain25/profileB.json"
+    }
+  },
+  "error": null
+}

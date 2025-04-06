@@ -1,0 +1,208 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_343",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueM",
+            "issueA": "valueA",
+            "issueC": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.9988662832,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.8993749982
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_conceder_agent_conceder_agent_ConcederAgent_344",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueD": "valueG",
+            "issueA": "valueA",
+            "issueC": "valueS"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.4258034231,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.9472831504
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_343",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueM",
+            "issueA": "valueA",
+            "issueC": "valueL"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.9384576112,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.898425947
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_conceder_agent_conceder_agent_ConcederAgent_344",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueD": "valueF",
+            "issueA": "valueA",
+            "issueC": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.3902734659,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.9276873772
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_343",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueP",
+            "issueA": "valueA",
+            "issueC": "valueI"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.9323815209,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.8253835384
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_conceder_agent_conceder_agent_ConcederAgent_344",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueD": "valueJ",
+            "issueA": "valueA",
+            "issueC": "valueO"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.3468851151,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.8947385916
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_343",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueM",
+            "issueA": "valueA",
+            "issueC": "valueI"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.9694185616,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.9129974734
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_conceder_agent_conceder_agent_ConcederAgent_344",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueD": "valueM",
+            "issueA": "valueA",
+            "issueC": "valueI"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_343": 0.9694185616,
+          "agents_conceder_agent_conceder_agent_ConcederAgent_344": 0.9129974734
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_343",
+    "agents_conceder_agent_conceder_agent_ConcederAgent_344"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743945285372
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_c044123b-4cf4-465e-9d45-a040e7521ea7"
+                  }
+                },
+                "profile": "file:domains/domain18/profileB.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.conceder_agent.conceder_agent.ConcederAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain18/profileA.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_343": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_c044123b-4cf4-465e-9d45-a040e7521ea7"
+        }
+      },
+      "profile": "file:domains/domain18/profileB.json"
+    },
+    "agents_conceder_agent_conceder_agent_ConcederAgent_344": {
+      "party": {
+        "partyref": "pythonpath:agents.conceder_agent.conceder_agent.ConcederAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain18/profileA.json"
+    }
+  },
+  "error": null
+}

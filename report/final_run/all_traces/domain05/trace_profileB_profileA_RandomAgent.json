@@ -1,0 +1,4866 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4373391953,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6526392516
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueC",
+            "issueC": "valueF",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0705248765,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6291939818
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueA",
+            "issueC": "valueG",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5108549347,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6243279946
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3177145028,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8866947322
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3677445853,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6539059588
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueF",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3706727467,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6543609602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueC": "valueN",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0321901732,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6229759088
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueF",
+            "issueC": "valueN",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3151889032,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6574234494
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueD",
+            "issueC": "valueN",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3414770395,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.674423515
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueE",
+            "issueC": "valueG",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4714862798,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6143537718
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueD",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3144566343,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7006166788
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4769905475,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6866486912
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueC",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2679351575,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.617407308
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueE",
+            "issueC": "valueI",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2041616853,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6050741942
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueD",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3599190023,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6133472196
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5136343055,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.699446779
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueD",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4691649645,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.646089952
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4046027468,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9667470668
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueG",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4869180543,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6580794682
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4780691128,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8764773896
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueD",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3319150043,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6163474376
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4401686838,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7236495944
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5465851575,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.685381984
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueN",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2842567438,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.659968666
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5805075428,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7201391756
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueD",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3741978905,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6970768954
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueC": "valueL",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1398102567,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7029159536
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2902409962,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6915793222
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueD",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.346716397,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.604106779
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5057621172,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8143680754
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3397405873,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6569061768
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5020116458,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6672174856
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2480286267,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.609696077
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.577418644,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7533921088
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1896314767,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6897984368
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.8575594352,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825579776
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueD",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.324137983,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6135786258
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueF",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3073015672,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6713999302
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.90924,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3351058688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3387502312,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7283215024
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.257132651,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8799584438
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueF",
+            "issueC": "valueF",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2114288609,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.654167416
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueI",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1654992347,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6037956848
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueC",
+            "issueC": "valueF",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1612848765,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6202433464
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueN",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1645407852,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6157587842
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueN",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.484262706,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.683760763
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueA",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2401482699,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.730559612
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5677505475,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6776980558
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4681726818,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7206493764
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueB",
+            "issueC": "valueL",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1499726539,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6939359536
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueF",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4913531932,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6629387582
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3733695995,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6721148986
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4871529447,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6776686912
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueC",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1873375547,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6173779434
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0615617727,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6386619248
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4910558915,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7089186258
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueF",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2248731664,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7133564624
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueD",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4723436975,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.60162
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.446095014,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7870655596
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1539882967,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9061297912
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.859735294,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.298823353
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueI",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2503689482,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6197321272
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5337661152,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8113678574
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueH",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4446533392,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6207055046
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueC",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0636267027,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6403933738
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueD",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2003092872,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7254919544
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3407050752,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.621274093
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueH",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3386182357,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6124529904
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1548226512,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6717211618
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueA",
+            "issueC": "valueD",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2630652892,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.719541537
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.8784899348,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3552848264
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2531625502,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7875463958
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.90924,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3351058688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3787951835,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6785865274
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueD",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4732567375,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6521016914
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.305756155,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7905759784
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueC": "valueN",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1229501732,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6140252734
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2688805387,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9831819078
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2383221347,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6615780848
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2383221347,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6615780848
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueJ",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2449433642,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6132604984
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2902409962,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6915793222
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2902409962,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6915793222
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.8784899348,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3552848264
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueL",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2025662587,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6969655362
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueF",
+            "issueC": "valueG",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4955798312,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.607124845
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueC",
+            "issueC": "valueM",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.168326216,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8447558648
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueH",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4446533392,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6207055046
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2681356438,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8812545156
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3161292218,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7176645544
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueC",
+            "issueC": "valueM",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.140322218,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8477560828
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueB",
+            "issueC": "valueN",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0423525704,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6139959088
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4500651148,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8794776076
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueC",
+            "issueC": "valueN",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.114852706,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6247367224
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueB",
+            "issueC": "valueL",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1156780147,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6169132016
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueC",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0534643055,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6493733738
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.640174646,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7474416914
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueE",
+            "issueC": "valueD",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3144566343,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7006166788
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4539672023,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6721442632
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4005931932,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6718893936
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueJ",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4895020635,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.613444027
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueA",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1882829359,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9831525432
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueC",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.0588898895,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6558450026
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueA",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4260306939,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6801125432
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4564680808,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7141541356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.6494240032,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.68798
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1548226512,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6717211618
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4116762452,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.99102
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueG",
+            "issueC": "valueI",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4140951543,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6002970682
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueF",
+            "issueC": "valueL",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3532143767,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7386302014
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueL",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3684894802,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.755833351
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueM",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4158682967,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6890925432
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueE",
+            "issueC": "valueN",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2630913538,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6676525942
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueD",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2715443782,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6105490432
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueH",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.6083795453,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6012704456
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueE",
+            "issueC": "valueN",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3258473558,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6617021768
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueC": "valueM",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3068661112,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6747059838
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueE"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.403874476,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.711124553
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3733695995,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6721148986
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueA",
+            "issueC": "valueG",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4582613299,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.621298412
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueA",
+            "issueC": "valueL",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3684894802,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.755833351
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueI",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4949276475,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6199156558
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueN",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1645407852,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6157587842
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9194023972,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261258688
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueH",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.6083795453,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6012704456
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4116762452,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.99102
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueN",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1645407852,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6157587842
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueD",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3500656485,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6110741434
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3278769,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.8777147322
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4571386132,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9037505408
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4856303075,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.702446997
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueA",
+            "issueC": "valueD",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2104716844,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7165119544
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1724535824,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7416323678
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueD",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3668482067,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7160278574
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueI",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.5190598895,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.7059184078
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueF",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1628454352,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9749293936
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.91015304,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3855875602
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueC",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.098731606,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.846022572
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9403328968,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.2988527176
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueJ",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2449433642,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6132604984
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.440137608,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9080468306
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueA",
+            "issueC": "valueH",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4166493412,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6237057226
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.971996002,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3291554514
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueC",
+            "issueA": "valueD",
+            "issueC": "valueM",
+            "issueD": "valueG"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2206260947,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.809677248
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3261552334
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueB",
+            "issueC": "valueJ",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.1523217727,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6297112894
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueF",
+            "issueC": "valueM",
+            "issueD": "valueD"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2950977024,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.786297251
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueH",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9057944065,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3255329614
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueB",
+            "issueC": "valueL",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.2480286267,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.609696077
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueI",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4737622575,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.627599584
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.938157038,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3825873422
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueH",
+            "issueC": "valueI",
+            "issueD": "valueC"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.4737622575,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.627599584
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.9123288988,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.3018529356
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueG",
+            "issueC": "valueM",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.3418467448,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.9726974842
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_59",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.7025851388,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6018927176
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_60",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueG",
+            "issueC": "valueG",
+            "issueD": "valueF"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_59": 0.7025851388,
+          "agents_random_agent_random_agent_RandomAgent_60": 0.6018927176
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_59",
+    "agents_random_agent_random_agent_RandomAgent_60"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743944331493
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_326ea6ae-3f80-458e-bd34-fbaf3e83ef92"
+                  }
+                },
+                "profile": "file:domains/domain05/profileB.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.random_agent.random_agent.RandomAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain05/profileA.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_59": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_326ea6ae-3f80-458e-bd34-fbaf3e83ef92"
+        }
+      },
+      "profile": "file:domains/domain05/profileB.json"
+    },
+    "agents_random_agent_random_agent_RandomAgent_60": {
+      "party": {
+        "partyref": "pythonpath:agents.random_agent.random_agent.RandomAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain05/profileA.json"
+    }
+  },
+  "error": null
+}

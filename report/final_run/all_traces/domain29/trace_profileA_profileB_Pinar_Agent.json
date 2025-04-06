@@ -1,0 +1,91 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_427",
+        "bid": {
+          "issuevalues": {
+            "issueA": "valueC",
+            "issueC": "valueC",
+            "issueF": "valueB",
+            "issueE": "valueC",
+            "issueB": "valueE",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_427": 0.9665680465,
+          "agents_ANL2022_Pinar_Agent_Pinar_Agent_Pinar_Agent_428": 0.3654975847
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_427",
+    "agents_ANL2022_Pinar_Agent_Pinar_Agent_Pinar_Agent_428"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743945655265
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_faa62016-88f0-465f-b0b6-464647cfa4b5"
+                  }
+                },
+                "profile": "file:domains/domain29/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.Pinar_Agent.Pinar_Agent.Pinar_Agent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain29/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_427": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_faa62016-88f0-465f-b0b6-464647cfa4b5"
+        }
+      },
+      "profile": "file:domains/domain29/profileA.json"
+    },
+    "agents_ANL2022_Pinar_Agent_Pinar_Agent_Pinar_Agent_428": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.Pinar_Agent.Pinar_Agent.Pinar_Agent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain29/profileB.json"
+    }
+  },
+  "error": null
+}

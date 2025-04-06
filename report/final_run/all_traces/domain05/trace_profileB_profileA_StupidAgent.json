@@ -1,0 +1,106 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_61",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_61": 1.0,
+          "agents_stupid_agent_stupid_agent_StupidAgent_62": 0.3261552334
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_stupid_agent_stupid_agent_StupidAgent_62",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueA",
+            "issueA": "valueH",
+            "issueC": "valueG",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_61": 1.0,
+          "agents_stupid_agent_stupid_agent_StupidAgent_62": 0.3261552334
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_61",
+    "agents_stupid_agent_stupid_agent_StupidAgent_62"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743944341852
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_5e7965e9-8ac9-4d2c-8c14-22211af61c89"
+                  }
+                },
+                "profile": "file:domains/domain05/profileB.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.stupid_agent.stupid_agent.StupidAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain05/profileA.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_61": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_5e7965e9-8ac9-4d2c-8c14-22211af61c89"
+        }
+      },
+      "profile": "file:domains/domain05/profileB.json"
+    },
+    "agents_stupid_agent_stupid_agent_StupidAgent_62": {
+      "party": {
+        "partyref": "pythonpath:agents.stupid_agent.stupid_agent.StupidAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain05/profileA.json"
+    }
+  },
+  "error": null
+}

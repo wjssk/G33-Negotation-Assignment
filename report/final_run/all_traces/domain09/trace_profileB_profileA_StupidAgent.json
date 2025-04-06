@@ -1,0 +1,112 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_21",
+        "bid": {
+          "issuevalues": {
+            "issueE": "valueA",
+            "issueA": "valueB",
+            "issueG": "valueC",
+            "issueB": "valueC",
+            "issueC": "valueA",
+            "issueF": "valueB",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_21": 1.0,
+          "agents_stupid_agent_stupid_agent_StupidAgent_22": 0.4636716547
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_stupid_agent_stupid_agent_StupidAgent_22",
+        "bid": {
+          "issuevalues": {
+            "issueE": "valueA",
+            "issueA": "valueB",
+            "issueG": "valueC",
+            "issueB": "valueC",
+            "issueC": "valueA",
+            "issueF": "valueB",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_21": 1.0,
+          "agents_stupid_agent_stupid_agent_StupidAgent_22": 0.4636716547
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_21",
+    "agents_stupid_agent_stupid_agent_StupidAgent_22"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743944136220
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_d7f02e87-4cff-4c5a-9356-dd99ae4609d3"
+                  }
+                },
+                "profile": "file:domains/domain09/profileB.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.stupid_agent.stupid_agent.StupidAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain09/profileA.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_21": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_d7f02e87-4cff-4c5a-9356-dd99ae4609d3"
+        }
+      },
+      "profile": "file:domains/domain09/profileB.json"
+    },
+    "agents_stupid_agent_stupid_agent_StupidAgent_22": {
+      "party": {
+        "partyref": "pythonpath:agents.stupid_agent.stupid_agent.StupidAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain09/profileA.json"
+    }
+  },
+  "error": null
+}

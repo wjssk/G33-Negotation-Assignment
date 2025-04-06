@@ -1,0 +1,174 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_399",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueD",
+            "issueA": "valueF",
+            "issueC": "valueB",
+            "issueD": "valueS"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_399": 0.9458909016,
+          "agents_random_agent_random_agent_RandomAgent_400": 0.1581756066
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_400",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueL",
+            "issueA": "valueC",
+            "issueC": "valueB",
+            "issueD": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_399": 0.4961733881,
+          "agents_random_agent_random_agent_RandomAgent_400": 0.1769254577
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_399",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueJ",
+            "issueA": "valueF",
+            "issueC": "valueB",
+            "issueD": "valueS"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_399": 1.0,
+          "agents_random_agent_random_agent_RandomAgent_400": 0.1458787374
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_400",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueB",
+            "issueA": "valueA",
+            "issueC": "valueA",
+            "issueD": "valueT"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_399": 0.3130524613,
+          "agents_random_agent_random_agent_RandomAgent_400": 0.8108597518
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_399",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueJ",
+            "issueA": "valueF",
+            "issueC": "valueB",
+            "issueD": "valueU"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_399": 0.951360568,
+          "agents_random_agent_random_agent_RandomAgent_400": 0.6300735278
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_random_agent_random_agent_RandomAgent_400",
+        "bid": {
+          "issuevalues": {
+            "issueB": "valueJ",
+            "issueA": "valueF",
+            "issueC": "valueB",
+            "issueD": "valueU"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_399": 0.951360568,
+          "agents_random_agent_random_agent_RandomAgent_400": 0.6300735278
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_399",
+    "agents_random_agent_random_agent_RandomAgent_400"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743945273525
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_de67d2cb-b387-46e2-a821-3bcca09b947d"
+                  }
+                },
+                "profile": "file:domains/domain13/profileB.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.random_agent.random_agent.RandomAgent",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain13/profileA.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_399": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_de67d2cb-b387-46e2-a821-3bcca09b947d"
+        }
+      },
+      "profile": "file:domains/domain13/profileB.json"
+    },
+    "agents_random_agent_random_agent_RandomAgent_400": {
+      "party": {
+        "partyref": "pythonpath:agents.random_agent.random_agent.RandomAgent",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain13/profileA.json"
+    }
+  },
+  "error": null
+}

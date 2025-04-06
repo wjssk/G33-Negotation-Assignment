@@ -1,0 +1,58 @@
+---
+title: "CAI Negotiation Assignment - Report on \"Results\" folder"
+author: "Group 33"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    keep_tex: yes
+    number_sections: yes
+---
+
+\tableofcontents
+
+# About
+
+This document contains all runs in the Results folder of the repository.
+
+```{r setup, echo=FALSE}
+source("aana_utils.R")
+library(gtools)
+```
+
+```{r, echo=TRUE}
+repo_path <- "../"
+```
+
+```{r, echo=FALSE}
+bayes_dir <- paste(repo_path, '20250405-221732/', sep='')
+iterations_dirs <- dir(bayes_dir)
+iterations_dirs <- iterations_dirs[which(substr(iterations_dirs, 1, 10)=='iteration_')]
+iterations_dirs <- iterations_dirs[-which(iterations_dirs=='iteration_averages.csv')]
+
+cat(file=stderr(), sprintf("\nFound %d iterations\n", length(iterations_dirs)))
+```
+
+```{r, results="asis", fig.align='center', out.width="100%"}
+
+for (iter_dir in iterations_dirs[length(iterations_dirs)]) {
+  
+  results_in_dir <- mixedsort(dir(paste(bayes_dir, iter_dir, sep='')))
+  
+  cat(sprintf("\n\\clearpage\n\n# %s (%d results)\n", iter_dir, length(results_in_dir)))
+  
+  for (result in results_in_dir) {
+  
+    cat(sprintf("\n\\clearpage\n\n## %s - %s\n", iter_dir, result))
+    
+    result_data <- try(
+      read_results_at_path(paste(paste(bayes_dir, iter_dir, "/", result,sep='')))
+    )
+    if (inherits(result_data, "try-error")) {
+      next;
+    } else {
+      plot_run_results(result_data)
+    }
+  
+  }
+}
+```

@@ -1,0 +1,224 @@
+{
+  "actions": [
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_679",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueB",
+            "issueB": "valueA",
+            "issueE": "valueE",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 1.0,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.495
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueA",
+            "issueE": "valueJ",
+            "issueF": "valueB",
+            "issueD": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 0.3171378516,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.9587849008
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_679",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueB",
+            "issueB": "valueA",
+            "issueE": "valueE",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 1.0,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.495
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueA",
+            "issueE": "valueK",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 0.5702865136,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.9785646572
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_679",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueB",
+            "issueB": "valueA",
+            "issueE": "valueE",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 1.0,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.495
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueA",
+            "issueE": "valueJ",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueA"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 0.5809378516,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.9501949008
+        }
+      }
+    },
+    {
+      "Offer": {
+        "actor": "agents_group33_agent_group33_agent_TemplateAgent_679",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueA",
+            "issueE": "valueE",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 0.99039,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.90778
+        }
+      }
+    },
+    {
+      "Accept": {
+        "actor": "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680",
+        "bid": {
+          "issuevalues": {
+            "issueC": "valueA",
+            "issueB": "valueA",
+            "issueE": "valueE",
+            "issueF": "valueA",
+            "issueD": "valueB",
+            "issueA": "valueB"
+          }
+        },
+        "utilities": {
+          "agents_group33_agent_group33_agent_TemplateAgent_679": 0.99039,
+          "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": 0.90778
+        }
+      }
+    }
+  ],
+  "connections": [
+    "agents_group33_agent_group33_agent_TemplateAgent_679",
+    "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680"
+  ],
+  "progress": {
+    "ProgressTime": {
+      "duration": 10000,
+      "start": 1743946576384
+    }
+  },
+  "settings": {
+    "SAOPSettings": {
+      "participants": [
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+                  "parameters": {
+                    "storage_dir": "agent_storage/TemplateAgent_99f35470-d0cc-46b6-b821-a127fed90dbf"
+                  }
+                },
+                "profile": "file:domains/domain44/profileA.json"
+              }
+            ]
+          }
+        },
+        {
+          "TeamInfo": {
+            "parties": [
+              {
+                "party": {
+                  "partyref": "pythonpath:agents.ANL2022.AgentFO2.AgentFO2.AgentFO2",
+                  "parameters": {}
+                },
+                "profile": "file:domains/domain44/profileB.json"
+              }
+            ]
+          }
+        }
+      ],
+      "deadline": {
+        "DeadlineTime": {
+          "durationms": 10000
+        }
+      }
+    }
+  },
+  "partyprofiles": {
+    "agents_group33_agent_group33_agent_TemplateAgent_679": {
+      "party": {
+        "partyref": "pythonpath:agents.group33_agent.group33_agent.TemplateAgent",
+        "parameters": {
+          "storage_dir": "agent_storage/TemplateAgent_99f35470-d0cc-46b6-b821-a127fed90dbf"
+        }
+      },
+      "profile": "file:domains/domain44/profileA.json"
+    },
+    "agents_ANL2022_AgentFO2_AgentFO2_AgentFO2_680": {
+      "party": {
+        "partyref": "pythonpath:agents.ANL2022.AgentFO2.AgentFO2.AgentFO2",
+        "parameters": {}
+      },
+      "profile": "file:domains/domain44/profileB.json"
+    }
+  },
+  "error": null
+}
