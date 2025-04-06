@@ -1,0 +1,125 @@
+---
+title: "CAI Negotiation Assignment - Report on Bayesian optimization"
+author: "Group 33"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    keep_tex: yes
+    number_sections: yes
+---
+
+\tableofcontents
+
+# About
+
+This document produces full run output for each run in an optimization sequence.
+
+```{r setup, echo=FALSE}
+source("aana_utils.R")
+library(gtools)
+```
+
+```{r, echo=TRUE, cache=TRUE}
+repo_path <- "../"
+final_result_dir <- 'final_run/all_traces/'
+domains <- mixedsort(dir(final_result_dir))
+
+# create a table with one run in each row
+data <-
+  data.frame(matrix(sapply(domains,
+         FUN = function (domain) { 
+           rbind(domain, paste(final_result_dir, domain, "/",
+                               dir(paste(final_result_dir, domain, sep='')), sep=''))
+         }), byrow=TRUE, ncol=2))
+colnames(data) <- c("domain", "file_path")
+
+# Load the data to memory
+jsons <- sapply(data$file_path, function(path) { 
+  read_results_json(path)
+})
+```
+
+```{r}
+# Regenerate data just in case
+data <-
+  data.frame(matrix(sapply(as.factor(domains),
+         FUN = function (domain) { 
+           rbind(domain, paste(final_result_dir, domain, "/",
+                               dir(paste(final_result_dir, domain, sep='')), sep=''))
+         }), byrow=TRUE, ncol=2))
+colnames(data) <- c("domain", "file_path")
+
+ns <- seq(nrow(data))
+
+# agent 1 column
+data$against <- as.factor(sapply(ns, function(x) {
+  agent_name(sapply(jsons[,x]$settings$SAOPSettings$participants$TeamInfo$parties, 
+                   function(x) {x[["party"]][["partyref"]]})[2])
+}))
+
+data$reversed <- as.factor(sapply(data, function(x) {x[2]}))
+
+# 'failed?' column
+data$failed <- sapply(ns, function(x) {is.null(jsons[,x]$actions$Accept)})
+
+# our utility
+data$util_ours <- sapply(ns, function(x) {
+  na.omit(jsons[,x]$actions$Accept$utilities[[1]])
+})
+data$util_ours[which(data$failed)] <- NA
+data$util_ours <- as.numeric(data$util_ours)
+
+# opponent utility
+data$util_opp <- sapply(ns, function(x) {
+  unlist(na.omit(jsons[,x]$actions$Accept$utilities[2]))
+})
+data$util_opp[which(data$failed)] <- NA
+data$util_opp <- as.numeric(data$util_opp)
+
+all_agents <- sort(unique(data$against))
+
+
+```
+
+```{r}
+
+barplot(sapply(domains, function(d) {sum(data$failed[which(data$domain == d)])}),
+        main = "Number of failed runs per domain")
+barplot(sapply(all_agents, function(a) {sum(data$failed[data$against == a])}),
+        main = "Number of failed runs per agent")
+```
+
+```{r}
+hist((data$util_ours - data$util_opp)[which(substr(data$against, 1, 5) == "Agent")],
+     main="Performance against 'CSE3210' agents", xlab="Average utility gain")
+hist((data$util_ours - data$util_opp)[which(substr(data$against, 1, 5) != "Agent")],
+     main="Performance against non-'CSE3210' agents", xlab="Average utility gain")
+
+agent_perf <- data.frame(t(sapply(all_agents, function(a) {
+    (data$util_ours - data$util_opp)[which(data$against == a)]
+})), row.names = all_agents)
+agent_perf <- sort_by.data.frame(agent_perf, apply(agent_perf, MARGIN=1, FUN = function(x) {median(na.omit(x))}))
+
+agent_mean_perf <- apply(agent_perf, FUN = function(x) {median(na.omit(x))}, MARGIN = 1)
+
+par(mar=c(5,12,1,1))
+barplot(agent_mean_perf[seq(10, 1, -1)], horiz = TRUE, las=1, xlim=c(-1, 0),
+        main="Median utility gain against 10 toughest opponents")
+
+par(mar=c(5,12,1,1))
+barplot(agent_mean_perf[seq(41, 50, 1)], horiz = TRUE, las=1, xlim=c(0, 1),
+        main="Median utility gain against 10 easiest opponents")
+
+par(mar=c(4,4,4,4))
+boxplot(t(agent_perf[which(substr(rownames(agent_perf),1,5)=="Agent"),]), 
+        horizontal=TRUE, outline=FALSE,
+        main="Utility gain against all opponents")
+abline(v=0)
+
+
+
+```
+
+```{r}
+
+```

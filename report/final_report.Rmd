@@ -45,6 +45,12 @@ editor_options:
 
 \end{abstract}
 
+```{r setup, echo="FALSE"}
+knitr::opts_chunk$set(echo = FALSE,
+                      results = "hide")
+library(scales)
+```
+
 # Introduction
 
 Multi-agent negotiation is a task for artificially intelligent and
@@ -225,16 +231,78 @@ parameter based on testing with a set of known agents.
 
 # Evaluation
 
-The final stage of our optimization procedure is the source of data for
-our evaluation. We run the agent against a cross product of 50 test
-agents and 5 randomly selected preference domains. The data that results
-from this testing is discussed in this chapter as an indicator of our
-agent's performance and limitations.
+After optimizing the agent and fixing its parameters, we performed a
+systematic evaluation against all other agents in the negotiation
+domains provided. We ran a total of 5000 negotiations with a 10 second
+negotiation time each. The total comes from the cross product of 50
+opponent agents, 50 domains, and 2 'orientations' for each domain. The
+data that results from this testing is discussed in this chapter as an
+indicator of our agent's performance and limitations.
 
-## Performance against other agents
+```{r load-data, cache=TRUE, echo=FALSE}
+source("load_final_data.R");
+```
 
-The data should indicate that we perform well for individual utility
-against a variety of opponent agents.
+## Performance summary against other agents
+
+The graph below shows the average difference in utility against
+'CSE3210' agents in the repository.
+
+```{r plots1, out.width="100%"}
+hist((data$util_ours - data$util_opp)[which(substr(data$against, 1, 5) == "Agent")],
+     main="Performance against 'CSE3210' agents", xlab="Mean utility gain")
+```
+
+```{r calc_perf}
+agent_perf <- data.frame(t(sapply(all_agents, function(a) {
+    (data$util_ours - data$util_opp)[which(data$against == a)]
+})), row.names = all_agents)
+agent_perf <- sort_by.data.frame(agent_perf, apply(agent_perf, MARGIN=1, FUN = function(x) {median(na.omit(x))}))
+agent_mean_perf <- apply(agent_perf, FUN = function(x) {median(na.omit(x))}, MARGIN = 1)
+```
+
+The following two plots compare our agent's performance against the 10
+empirically toughest and easiest opponents. While it falls short of
+consistently outranking some of the most advanced implementations, the
+box plot demonstrates that our agent performs roughly within the 30th
+percentile of provided agents.
+
+```{r hardest-opp}
+par(mar=c(5,8,5,4))
+barplot(agent_mean_perf[seq(10, 1, -1)], horiz = TRUE, las=1, xlim=c(-1, 0),
+        main="Median utility gain against 10 toughest opponents")
+```
+
+```{r easiest-opp}
+par(mar=c(5,8,5,4))
+barplot(agent_mean_perf[seq(41, 50, 1)], horiz = TRUE, las=1, xlim=c(0, 1),
+        main="Median utility gain against 10 easiest opponents")
+```
+
+```{r}
+par(mar=c(4,4,4,4))
+boxplot(t(agent_perf[which(substr(rownames(agent_perf),1,5)=="Agent"),]), 
+        horizontal=TRUE, outline=FALSE,
+        main="Utility gain against all opponents")
+abline(v=0)
+```
+
+It is notable that our agent performs well with diverse classes of
+'simple' agent, in particular the conceder, boulware, and linear agents.
+This indicates adaptability to several strategies.
+
+## Analysis of bidding behavior
+
+For a more in-depth analysis of the bidding behavior, we select a
+negotiation that occurred between our agent (marked *TemplateAgent*) and
+*LinearAgent*, which bids using a linear concession strategy.
+
+```{r}
+chosen <- which((data$domain == 'domain26') * (data$against == 'LinearAgent') * (data$reversed == FALSE) == 1)
+chosen_json <- jsons[,chosen]
+
+domain <- plot_run_results(get_json_data(chosen_json))
+```
 
 ## Limitations
 

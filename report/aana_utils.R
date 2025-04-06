@@ -10,9 +10,19 @@ read_results <- function (repo_path, results_nam) {
   read_results_at_path(json_path)
 }
 
-read_results_at_path <- function (json_path) {
+
+read_results_json <- function (json_path) {
   
   json <- jsonlite::fromJSON(json_path)
+  
+  if (!is.null(json$error)) {
+    stop(sprintf("Results contain an error: %s\n", json$error$message))
+  }
+  
+  return (json)
+}
+
+get_json_data <- function(json) {
   
   agents <- sapply(json$settings$SAOPSettings$participants$TeamInfo$parties, 
                    function(x) {x[["party"]][["partyref"]]})
@@ -45,6 +55,13 @@ read_results_at_path <- function (json_path) {
   return (list(data, connections, agents, duration, json))
 }
 
+read_results_at_path <- function (json_path) {
+  
+  json <- jsonlite::fromJSON(json_path)
+  
+  get_json_data(json)
+}
+
 profile_utilities <- function (util_json) {
   issueUtilities <- sapply(util_json$LinearAdditiveUtilitySpace$issueUtilities,
                            function(x) {unlist(x$DiscreteValueSetUtilities$valueUtilities)})
@@ -55,7 +72,7 @@ profile_utilities <- function (util_json) {
   apply(combos, MARGIN=1, FUN=function(x) {sum(x * t(weights))})
 }
 
-read_utilities_json <- function (repo_path, results_name, results_json) {
+read_utilities_json <- function (repo_path, results_json) {
   json <- results_json
   
   connections <- json$connections
@@ -182,7 +199,7 @@ plot_run_results <- function (result_data) {
          col=colors[c(NA, 1, 2, NA, 3, 4, NA, 3, 4)],
          lwd=3, cex=0.7)
   
-  utils_jsons <- read_utilities_json(repo_path, results_name, json)
+  utils_jsons <- read_utilities_json(repo_path, json)
   all_utils <- sapply(utils_jsons, profile_utilities)
   
   plot(all_utils, pch=16, cex=0.2, col='gray60', asp=1, main="Utility space",

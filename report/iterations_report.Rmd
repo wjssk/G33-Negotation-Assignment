@@ -1,5 +1,5 @@
 ---
-title: "CAI Negotiation Assignment - Report on \"Results\" folder"
+title: "CAI Negotiation Assignment - Report on Bayesian optimization"
 author: "Group 33"
 date: "`r Sys.Date()`"
 output: 
@@ -12,7 +12,7 @@ output:
 
 # About
 
-This document contains all runs in the Results folder of the repository.
+This document produces full run output for each run in an optimization sequence.
 
 ```{r setup, echo=FALSE}
 source("aana_utils.R")
@@ -27,14 +27,16 @@ repo_path <- "../"
 bayes_dir <- paste(repo_path, '20250405-221732/', sep='')
 iterations_dirs <- dir(bayes_dir)
 iterations_dirs <- iterations_dirs[which(substr(iterations_dirs, 1, 10)=='iteration_')]
-iterations_dirs <- iterations_dirs[-which(iterations_dirs=='iteration_averages.csv')]
+iterations_dirs <- mixedsort(iterations_dirs[-which(iterations_dirs=='iteration_averages.csv')])
 
 cat(file=stderr(), sprintf("\nFound %d iterations\n", length(iterations_dirs)))
 ```
 
 ```{r, results="asis", fig.align='center', out.width="100%"}
 
-for (iter_dir in iterations_dirs[length(iterations_dirs)]) {
+# which iteration(s) to plot
+it_number <- length(iterations_dirs)
+for (iter_dir in iterations_dirs[it_number]) {
   
   results_in_dir <- mixedsort(dir(paste(bayes_dir, iter_dir, sep='')))
   
