@@ -342,8 +342,8 @@ class TemplateAgent(DefaultParty):
         bid_utility = self.profile.getUtility(received_bid)
 
         # time thresholds (to be optimized)
-        t = 0.9  # start using max-seen at 80% of time
-        t_prime = 0.99  # accept anything above reservation value after 98% of time
+        t = self.param_values.get("t", 0.9)  # start using max-seen at 80% of time
+        t_prime = self.param_values.get("t_prime", 0.98)  # accept anything above reservation value after 98% of time
 
         # update the best seen only until we reach the MAX-All phase
         if (progress < t and bid_utility > self.max_seen_bid):
@@ -358,7 +358,7 @@ class TemplateAgent(DefaultParty):
             bid_utility > self.max_seen_bid if t <= progress < t_prime else False,
 
             # Phase 3: If we are close to the deadline, accept anything above reservation value
-            bid_utility > 0.0 if progress >= t_prime else False
+            bid_utility > self.param_values.get("final_utility", 0.6) if progress >= t_prime else False
         ]
 
         return any(conditions)
@@ -367,14 +367,14 @@ class TemplateAgent(DefaultParty):
     def get_minimum_utility_threshold(self) -> float:
         progress = self.progress.get(time() * 1000)
 
-        U_max = 0.95
-        U_min = 0.70
+        U_max = self.param_values.get("U_max", 0.9)
+        U_min = self.param_values.get("U_min", 0.6)
 
         # b controls the function shape (so if we concede early or only at the end)
         # b > 1 -> concede fast, b < 1 concede slowly, b = 1 -> linear model
         # change dynamically from based on time prpgress
-        b_early = self.param_values.get("b_early", 0.5)
-        b_late = self.param_values.get("b_late", 2.0)
+        b_early = self.param_values.get("b_early", 0.7397568075437101)
+        b_late = self.param_values.get("b_late", 2.3233908382273123)
         b = b_early + (b_late - b_early) * progress
 
         # time-based function used as baseline (based on Faratin et al 1998)
@@ -385,12 +385,12 @@ class TemplateAgent(DefaultParty):
 
         # adjust the threshold based on the opponents recent behavior (it can increase or decrease)
         offset_map = {
-            self.FORTUNATE: 0.01,
-            self.SELFISH: 0.05,
-            self.CONCESSION: 0.02,
-            self.UNFORTUNATE: -0.02,
-            self.NICE: 0.01,
-            self.SILENT: 0.0
+            self.FORTUNATE: self.param_values.get("FORTUNATE_offset", 0.05),
+            self.SELFISH: self.param_values.get("SELFISH_offset", 0.1),
+            self.CONCESSION: self.param_values.get("CONCESSION_offset", 0.1),
+            self.UNFORTUNATE: self.param_values.get("UNFORTUNATE_offset", -0.05),
+            self.NICE: self.param_values.get("NICE_offset", 0.05),
+            self.SILENT: self.param_values.get("SILENT_offset", -0.02)
         }
 
         offset = offset_map.get(recent_dans, 0.0)
@@ -415,7 +415,7 @@ class TemplateAgent(DefaultParty):
 
         alpha, eps = self.compute_dynamic_parameters()
 
-        sample_size = min(all_bids.size(), 500)
+        sample_size = min(all_bids.size(), 1000)
 
         for _ in range(sample_size):
             bid = all_bids.get(randint(0, all_bids.size() - 1))
@@ -472,7 +472,7 @@ class TemplateAgent(DefaultParty):
         recent_categories = self.dans_categories[-5:]
 
         if not recent_categories:
-            return (0.95, 0.2)
+            return self.param_values.get("default_alpha", 1.0), self.param_values.get("default_eps", 0.5)
 
         freq_map = {
             self.FORTUNATE: 0.0,
@@ -495,14 +495,14 @@ class TemplateAgent(DefaultParty):
 
         def get_params(dans_type):
             table = {
-                self.SELFISH: (1.00, 0.01),
-                self.CONCESSION: (0.92, 0.25),
-                self.FORTUNATE: (0.90, 0.5),
-                self.UNFORTUNATE: (1.00, 0.01),
-                self.NICE: (0.85, 0.4),
-                self.SILENT: (0.95, 0.2),
+                self.SELFISH: (self.param_values.get("SELFISH_params_alpha", 1.0), self.param_values.get("SELFISH_params_eps", 0.2)),
+                self.CONCESSION: (self.param_values.get("CONCESSION_params_alpha", 0.8), self.param_values.get("CONCESSION_params_eps", 0.1)),
+                self.FORTUNATE: (self.param_values.get("FORTUNATE_params_alpha", 0.8), self.param_values.get("FORTUNATE_params_eps", 0.1)),
+                self.UNFORTUNATE:  (self.param_values.get("UNFORTUNATE_params_alpha", 0.85), self.param_values.get("UNFORTUNATE_params_eps", 0.01)),
+                self.NICE: (self.param_values.get("NICE_params_alpha", 1.0), self.param_values.get("NICE_params_eps", 0.4)),
+                self.SILENT: (self.param_values.get("SILENT_params_alpha", 0.8), self.param_values.get("SILENT_params_eps", 0.1)),
             }
-            return table.get(dans_type, (0.95, 0.2))
+            return table.get(dans_type, (self.param_values.get("default_alpha", 1.0), self.param_values.get("default_eps", 0.5)))
 
         a1, e1 = get_params(top1)
         a2, e2 = get_params(top2)
