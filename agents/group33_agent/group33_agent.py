@@ -415,7 +415,7 @@ class TemplateAgent(DefaultParty):
 
         alpha, eps = self.compute_dynamic_parameters()
 
-        sample_size = min(all_bids.size(), 500)
+        sample_size = min(all_bids.size(), 1000)
 
         for _ in range(sample_size):
             bid = all_bids.get(randint(0, all_bids.size() - 1))
